@@ -14,13 +14,14 @@ import javax.persistence.Persistence;
  *
  * @author Javier
  */
-public class Practica3 {
+public class ACOES {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /*
         Autor a= new Autor();
         
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("practica3PU");
@@ -34,6 +35,7 @@ public class Practica3 {
         
         em.close();
         emf.close();
+*/
         
     }
 
