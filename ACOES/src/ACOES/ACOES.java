@@ -27,6 +27,8 @@ public class ACOES {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("ACOESPU");
         EntityManager em = emf.createEntityManager();
         
+        //Esto es una chorrada
+        
         
         em.close();
         emf.close();
