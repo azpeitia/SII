@@ -21,21 +21,16 @@ public class ACOES {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        /*
-        Autor a= new Autor();
         
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("practica3PU");
+        
+        
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ACOESPU");
         EntityManager em = emf.createEntityManager();
         
-        EntityTransaction tx = em.getTransaction();
-        tx.begin();
-        a.setNombre("Javi");
-        em.persist(a);
-        tx.commit();
         
         em.close();
         emf.close();
-*/
+
         
     }
 
