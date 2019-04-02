@@ -25,6 +25,9 @@ public class ACOES {
         socio.setNombre("Pablo");
         socio.setApellido1("Torres");
         
+        Apadrinamientos apadrinamientos = new Apadrinamientos();
+        
+        
         EntityManagerFactory emf2 = Persistence.createEntityManagerFactory("ACOESPU");
         //EntityManagerFactory emf = Persistence.createEntityManagerFactory("ACOESPU");
         EntityManager em2 = emf2.createEntityManager();
@@ -32,6 +35,7 @@ public class ACOES {
         EntityTransaction tx = em2.getTransaction();
         tx.begin();
         em2.persist(socio);
+        em2.persist(apadrinamientos);
         tx.commit();
         
         
