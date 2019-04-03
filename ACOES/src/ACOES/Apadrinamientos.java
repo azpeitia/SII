@@ -7,6 +7,7 @@ package ACOES;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,11 +33,20 @@ public class Apadrinamientos implements Serializable {
     
     @ManyToOne
     private Socio socio;
-    
+    //con el atributo apadhist modelamos la relacion uno a muchos que va desde apadrinamientos a historial_apadrinamientos
+    private List<Historial_apadrinamientos> apadhist;
     public Long getId_apadrinamiento() {
         return id_apadrinamiento;
     }
-
+    
+    public List<Historial_apadrinamientos> getApadhist(){
+        return apadhist;
+    }
+    
+    public void setApadhist(List<Historial_apadrinamientos> a2){
+        apadhist = a2;
+    }
+    
     public void setId_apadrinamiento(Long id) {
         this.id_apadrinamiento = id;
     }
