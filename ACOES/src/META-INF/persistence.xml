@@ -15,7 +15,7 @@
       <property name="javax.persistence.jdbc.password" value="usuario"/>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>
       <property name="javax.persistence.schema-generation.scripts.action" value="create"/>
-      <property name="javax.persistence.schema-generation.scripts.create-target" value="C:\Users\Javier\Documents\NetBeansProjects\create2.sql"/>
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="create.sql"/>
     </properties>
   </persistence-unit>
 </persistence>
