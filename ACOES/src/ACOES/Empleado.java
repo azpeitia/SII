@@ -30,6 +30,8 @@ public class Empleado implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long nif_emp;
     @Column(nullable=false)
+    private String pass;
+    @Column(nullable=false)
     private String nombre;
     @Column(nullable=false)
     private String apellido1;
@@ -47,23 +49,35 @@ public class Empleado implements Serializable {
     private Date fecha_alta;
     private String poblacion;
     private String provincia;
+<<<<<<< HEAD
+
+=======
     private String password;
     
+>>>>>>> 38897bdf5189afff9ae64c77bd91608dc178481c
     /*-------- relacion OneToMany con Apadrinamientos-------*/
     @OneToMany (mappedBy="empleado")
     private List<Apadrinamientos> apadrinamientos;
     @ManyToOne
     private Rol rol;        //Relacion Muchos a uno con Rol
-    
+
+    public void setPass(String pass){
+      this.pass = pass;
+    }
+
+    public String getPass(){
+      return this.pass;
+    }
+
     public List<Apadrinamientos> getapadrinamientos(){
         return apadrinamientos;
     }
-    
+
     public void setApadhist(List<Apadrinamientos> a2){
         apadrinamientos = a2;
     }
-    
-    
+
+
     public String getNombre() {
         return nombre;
     }
@@ -151,7 +165,7 @@ public class Empleado implements Serializable {
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
-    
+
     public Long getNif_emp() {
         return nif_emp;
     }
@@ -196,5 +210,5 @@ public class Empleado implements Serializable {
     public String toString() {
         return "ACOES.Empleado[ id=" + nif_emp + " ]";
     }
-    
+
 }
