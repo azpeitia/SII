@@ -273,7 +273,7 @@ public class Socio implements Serializable {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-    
+    /*
     
     public String getpassword() {
         return password;
@@ -281,9 +281,9 @@ public class Socio implements Serializable {
 
     /**
      * @param password the nombre to set
-     */
+     *//*
     public void setpassword(String password) {
         this.password = password;
-    }
+    }*/
     
 }
