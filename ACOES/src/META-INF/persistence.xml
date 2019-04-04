@@ -6,6 +6,8 @@
     <class>ACOES.Apadrinamientos</class>
     <class>ACOES.Jovenes</class>
     <class>ACOES.Historial_apadrinamientos</class>
+    <class>ACOES.Rol</class>
+    <class>ACOES.Empleado</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/ACOES"/>
       <property name="javax.persistence.jdbc.user" value="usuario"/>

@@ -12,6 +12,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
@@ -35,8 +37,10 @@ public class Empleado implements Serializable {
     @Column(nullable=false)
     private String movil;
     private String email;
+    @Temporal(TemporalType.DATE)
     private Date fecha_nacimiento;
     @Column(nullable=false)
+    @Temporal(TemporalType.DATE)
     private Date fecha_alta;
     private String poblacion;
     private String provincia;
