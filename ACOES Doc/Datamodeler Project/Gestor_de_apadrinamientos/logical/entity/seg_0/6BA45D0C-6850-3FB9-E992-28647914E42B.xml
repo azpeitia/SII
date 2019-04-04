@@ -27,6 +27,18 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="password" id="1209EE3F-2A9F-E56E-76A6-092BB28772FB">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-04 17:31:46 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="nombre" id="EFE43C5A-4FAE-6846-B8A0-7B244EF3F551">
 <createdBy>dosgr</createdBy>
 <createdTime>2019-04-01 19:16:14 UTC</createdTime>

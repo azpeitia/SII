@@ -46,6 +46,7 @@ public class Socio implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fecha_alta;
     private String observaciones;
+    private String password;
     
     /*------ RELACIÓN ----*/
     @OneToMany (mappedBy="socio")
@@ -271,6 +272,18 @@ public class Socio implements Serializable {
      */
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
+    }
+    
+    
+    public String getpassword() {
+        return password;
+    }
+
+    /**
+     * @param password the nombre to set
+     */
+    public void setpassword(String password) {
+        this.password = password;
     }
     
 }

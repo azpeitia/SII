@@ -49,7 +49,12 @@ public class Empleado implements Serializable {
     private Date fecha_alta;
     private String poblacion;
     private String provincia;
+<<<<<<< HEAD
 
+=======
+    private String password;
+    
+>>>>>>> 38897bdf5189afff9ae64c77bd91608dc178481c
     /*-------- relacion OneToMany con Apadrinamientos-------*/
     @OneToMany (mappedBy="empleado")
     private List<Apadrinamientos> apadrinamientos;
@@ -167,6 +172,18 @@ public class Empleado implements Serializable {
 
     public void setNif_emp(Long nif_emp) {
         this.nif_emp = nif_emp;
+    }
+    
+    
+    public String getpassword() {
+        return password;
+    }
+
+    /**
+     * @param password the nombre to set
+     */
+    public void setpassword(String password) {
+        this.password = password;
     }
 
     @Override

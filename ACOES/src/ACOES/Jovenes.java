@@ -45,7 +45,16 @@ public class Jovenes implements Serializable {
     /*-------RELACIÓN---*/
     @OneToMany (mappedBy="joven")
     private List<Apadrinamientos> apadrinamientos;   //Relación Uno a Muchos con Apadrinamientos
-
+    
+    
+    public List<Apadrinamientos> getapadrinamientos(){
+        return apadrinamientos;
+    }
+    
+    public void setApadhist(List<Apadrinamientos> a2){
+        apadrinamientos = a2;
+    }
+    
     public String getNombre() {
         return nombre;
     }
