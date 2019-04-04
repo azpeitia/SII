@@ -49,12 +49,8 @@ public class Empleado implements Serializable {
     private Date fecha_alta;
     private String poblacion;
     private String provincia;
-<<<<<<< HEAD
-
-=======
     private String password;
     
->>>>>>> 38897bdf5189afff9ae64c77bd91608dc178481c
     /*-------- relacion OneToMany con Apadrinamientos-------*/
     @OneToMany (mappedBy="empleado")
     private List<Apadrinamientos> apadrinamientos;
