@@ -51,6 +51,14 @@ public class Socio implements Serializable {
     @OneToMany (mappedBy="socio")
     private List<Apadrinamientos> apadrinamientos;      //Relación Uno a Muchos con Apadrinamientos
     
+    public List<Apadrinamientos> getapadrinamientos(){
+        return apadrinamientos;
+    }
+    
+    public void setApadhist(List<Apadrinamientos> a2){
+        apadrinamientos = a2;
+    }
+    
     
     public Long getNif_socio() {
         return nif_socio;

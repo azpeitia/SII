@@ -53,8 +53,16 @@ public class Empleado implements Serializable {
     private List<Apadrinamientos> apadrinamientos;
     @ManyToOne
     private Rol rol;        //Relacion Muchos a uno con Rol
-        
-
+    
+    public List<Apadrinamientos> getapadrinamientos(){
+        return apadrinamientos;
+    }
+    
+    public void setApadhist(List<Apadrinamientos> a2){
+        apadrinamientos = a2;
+    }
+    
+    
     public String getNombre() {
         return nombre;
     }

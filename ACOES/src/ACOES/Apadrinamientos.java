@@ -43,9 +43,7 @@ public class Apadrinamientos implements Serializable {
     private List<Historial_apadrinamientos> h_apadrinamientos;      //Relación Uno a Muchos con Historial de Apadrinameitnos
     
     
-    public Long getId_apadrinamiento() {
-        return id_apadrinamiento;
-    }
+
     
     public List<Historial_apadrinamientos> getApadhist(){
         return h_apadrinamientos;
@@ -53,6 +51,10 @@ public class Apadrinamientos implements Serializable {
     
     public void setApadhist(List<Historial_apadrinamientos> a2){
         h_apadrinamientos = a2;
+    }
+    
+    public Long getId_apadrinamiento() {
+        return id_apadrinamiento;
     }
     
     public void setId_apadrinamiento(Long id) {

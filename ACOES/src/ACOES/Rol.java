@@ -33,6 +33,16 @@ public class Rol implements Serializable {
     @OneToMany (mappedBy="rol")
     private List<Empleado> empleados;
     
+    
+    public List<Empleado> getempleados(){
+        return empleados;
+    }
+    
+    public void setempleados(List<Empleado> a2){
+        empleados = a2;
+    }
+    
+    
     public String getNombre() {
         return nombre;
     }
