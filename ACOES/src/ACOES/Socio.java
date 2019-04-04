@@ -7,11 +7,13 @@ package ACOES;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -45,10 +47,10 @@ public class Socio implements Serializable {
     private Date fecha_alta;
     private String observaciones;
     
-    /*-------- relacion OneToMany con Apadrinamientos-------
+    
     @OneToMany (mappedBy="socio")
     private List<Apadrinamientos> apadrinamientos;
-    */
+    
     
     public Long getNif_socio() {
         return nif_socio;
