@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Gestor_de_apadrinamientos" id="A1837D7B-D83D-9AAB-363C-071EA600E507" version="3.5">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:11:07 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>A1837D7B-D83D-9AAB-363C-071EA600E507</designId>
+</OSDM_Design>

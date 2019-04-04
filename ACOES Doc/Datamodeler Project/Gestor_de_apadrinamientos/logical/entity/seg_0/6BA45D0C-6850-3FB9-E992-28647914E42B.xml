@@ -1,0 +1,232 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6BA45D0C-6850-3FB9-E992-28647914E42B" name="Socios">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:11:55 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nif_socio" id="4D6B74CF-F355-EDA6-2C26-47D40D9C84A3">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:08 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="1209EE3F-2A9F-E56E-76A6-092BB28772FB">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-04 17:31:46 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="EFE43C5A-4FAE-6846-B8A0-7B244EF3F551">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:14 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido1" id="E307A03A-1B1E-7DE1-7949-51DCD64F2D65">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:22 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido2" id="ECEDE005-3245-770A-0A31-18E707195620">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:07:40 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="F2337EE4-60CD-7B6C-E731-ABC4EF89B747">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:25 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="3C344014-DA16-AC28-A524-159B9D8156E8">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:35 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="poblacion" id="0B18F39F-93AE-2EEC-6A7A-AAA659F67426">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:41 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cp" id="1EA19983-D745-8280-C88A-DB41BE3991A9">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:49 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="provincia" id="6A06A51B-6BD4-3610-669E-A2D5E9954554">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:20:48 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="5AC57300-FDAF-73AC-A944-C67B30C753CC">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:54 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_nacimiento" id="E71FF83A-382D-3B4D-DDFB-7350E4C27CA5">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:17:02 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="movil" id="D927EDC4-DE06-9BF2-850A-44099AFB51B2">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:17:11 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="48782560-07D7-67B7-3EF2-B1A55DCE2398">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:17:16 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_alta" id="846FB97F-13BE-4552-BB40-0A311186A667">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:17:25 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="observaciones" id="278F8579-8C75-0118-1A04-B8D6DEADA100">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:17:49 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="260ED20B-4331-A05C-23B8-23ABA5649962" name="Socios PK">
+<createdBy>dosgr</createdBy>
+<createdTime>2019-04-01 19:16:12 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4D6B74CF-F355-EDA6-2C26-47D40D9C84A3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

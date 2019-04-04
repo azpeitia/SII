@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9487314D-D96D-7635-4697-817F93108E61" name="Rol">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:35:47 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_rol" id="EF00F7F6-D361-E480-9473-CAC8B897B09D">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:35:55 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="E88193F9-6968-FB35-2518-088D06EEED30">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:36:06 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="81A17078-0A28-6CF9-74B1-E693089B44B1">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:37:18 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F4C6B377-5ED7-3310-ADF8-3E69C7F25957" name="rol PK">
+<createdBy>Javier</createdBy>
+<createdTime>2019-04-02 14:36:03 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EF00F7F6-D361-E480-9473-CAC8B897B09D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

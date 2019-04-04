@@ -5,10 +5,14 @@
  */
 package ACOES;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -16,7 +20,8 @@ import javax.persistence.TemporalType;
  *
  * @author Antonio
  */
-public class Historial_apadrinamientos {
+@Entity
+public class Historial_apadrinamientos implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,6 +31,9 @@ public class Historial_apadrinamientos {
     @Temporal(TemporalType.DATE)
     private Date fecha_baja;
     
+    /*------RELACIÓN---*/
+    @ManyToOne
+    private Apadrinamientos apadrinamiento;  //Relación Muchos a Uno con Apadrinamientos
     
     public Long getId_h_apadrinamientos() {
         return id_h_apadrinamientos;
