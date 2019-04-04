@@ -6,11 +6,13 @@
 package ACOES;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -40,6 +42,9 @@ public class Jovenes implements Serializable {
     private String procedencia ;
     private String colonia_actual ;
     private String observaciones ;
+    /*-------RELACIÓN---*/
+    @OneToMany (mappedBy="joven")
+    private List<Apadrinamientos> apadrinamientos;   //Relación Uno a Muchos con Apadrinamientos
 
     public String getNombre() {
         return nombre;

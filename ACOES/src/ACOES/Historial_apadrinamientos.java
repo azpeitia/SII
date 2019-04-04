@@ -6,9 +6,12 @@
 package ACOES;
 
 import java.util.Date;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -16,6 +19,7 @@ import javax.persistence.TemporalType;
  *
  * @author Antonio
  */
+@Entity
 public class Historial_apadrinamientos {
     private static final long serialVersionUID = 1L;
     @Id
@@ -26,6 +30,9 @@ public class Historial_apadrinamientos {
     @Temporal(TemporalType.DATE)
     private Date fecha_baja;
     
+    /*------RELACIÓN---*/
+    @ManyToOne
+    private Apadrinamientos apadrinamiento;  //Relación Muchos a Uno con Apadrinamientos
     
     public Long getId_h_apadrinamientos() {
         return id_h_apadrinamientos;

@@ -47,9 +47,9 @@ public class Socio implements Serializable {
     private Date fecha_alta;
     private String observaciones;
     
-    
+    /*------ RELACIÓN ----*/
     @OneToMany (mappedBy="socio")
-    private List<Apadrinamientos> apadrinamientos;
+    private List<Apadrinamientos> apadrinamientos;      //Relación Uno a Muchos con Apadrinamientos
     
     
     public Long getNif_socio() {

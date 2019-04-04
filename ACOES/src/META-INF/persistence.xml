@@ -4,6 +4,8 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>ACOES.Socio</class>
     <class>ACOES.Apadrinamientos</class>
+    <class>ACOES.Jovenes</class>
+    <class>ACOES.Historial_apadrinamientos</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/ACOES"/>
       <property name="javax.persistence.jdbc.user" value="usuario"/>

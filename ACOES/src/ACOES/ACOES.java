@@ -25,24 +25,24 @@ public class ACOES {
         socio.setNombre("Pablo");
         socio.setApellido1("Torres");
         
-        Apadrinamientos apadrinamientos = new Apadrinamientos();
+        //Apadrinamientos apadrinamientos = new Apadrinamientos();
         
         
-        EntityManagerFactory emf2 = Persistence.createEntityManagerFactory("ACOESPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("ACOESPU");
         //EntityManagerFactory emf = Persistence.createEntityManagerFactory("ACOESPU");
-        EntityManager em2 = emf2.createEntityManager();
+        EntityManager em = emf.createEntityManager();
         //EntityManager em = emf.createEntityManager();
-        EntityTransaction tx = em2.getTransaction();
+        EntityTransaction tx = em.getTransaction();
         tx.begin();
-        em2.persist(socio);
-        em2.persist(apadrinamientos);
+        em.persist(socio);
+        //em.persist(apadrinamientos);
         tx.commit();
         
         
         
         
-        em2.close();
-        emf2.close();
+        em.close();
+        emf.close();
 
         
     }
