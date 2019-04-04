@@ -6,11 +6,13 @@
 package ACOES;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -27,11 +29,10 @@ public class Rol implements Serializable {
     private String nombre;
     private String descripcion;
     
-   /*-------- relacion OneToMany con Apadrinamientos-------
+   /*-------- relacion OneToMany con Apadrinamientos-------*/
     @OneToMany (mappedBy="rol")
     private List<Empleado> empleados;
-    */
-
+    
     public String getNombre() {
         return nombre;
     }

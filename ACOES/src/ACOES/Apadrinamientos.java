@@ -32,6 +32,8 @@ public class Apadrinamientos implements Serializable {
     private Date fecha_inicio;
     
     /*----REALACIONES---*/
+    @ManyToOne              //Relación Muchos a uno con Empleado
+    private Empleado empleado;
     @ManyToOne
     private Jovenes joven;  //Relación Muchos a Uno con Jovenes
     @ManyToOne
