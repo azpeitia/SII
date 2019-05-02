@@ -1,0 +1,6 @@
+-Añadir campo status apadrinamiento tipo String
+-Añadir entidad JPA mensaje
+	-Añadir una lista de mensajes al apadrinamiento
+	-Añadir un apadrinamiento a la entidad mensaje
+	-Queda establecida la relacion 1-muchos entre mensaje y apadrinamiento
+	-Queda reflejado el requisito gestion de mensajes de la version de los requisitos
