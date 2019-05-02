@@ -1,0 +1,47 @@
+Listado de las vistas y quien las va a implementar.
+
+A = Antonio
+S = Santi
+F = D. Florido
+M = D. Mérida
+J = Javi
+
+---VISTAS---
+1-index				A
+2-registro			S
+3-login				F
+4-socio				M
+5-empleado			J
+6-admin				A
+7-listarap			S
+8-midificardatos	F
+9-solicitarap		M
+10-listarap			J
+11-solicitudes		A
+12-empleados		S
+13-admins			F
+14-socios			M
+15-mostrardatosemp	J
+16-altanj			A
+17-listarap			S
+18-listarnj			F
+19-altamsg			M
+20-altaemp			J
+21-altaadmin		A
+22-msgs				S
+
+
+---BACKING BEANS---
+user				J
+admin				J
+socio				J
+empleado			J
+nj					J
+msg					J
+ap					J
+
+-Antonio
+-Santi
+-Javi
+-D. Mérida
+-D. Florido
