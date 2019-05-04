@@ -46,7 +46,7 @@ public class Login {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }    
+            }
         } else  {
             cont = 0;
             while(cont < socios.size()  && socios.get(cont).getNombre() != this.username) {
