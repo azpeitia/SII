@@ -29,7 +29,9 @@ public class Login {
     private List<Empleado> empleados = new ArrayList<>();
     private List<Socio> socios = new ArrayList<>();
     
+    
     public void login() {
+        
         FacesContext context = FacesContext.getCurrentInstance();
         int cont = 0;
         while(cont < empleados.size()  && empleados.get(cont).getNombre() != this.username) {

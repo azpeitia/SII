@@ -57,6 +57,7 @@ public class Empleado implements Serializable {
     @ManyToOne
     private Rol rol;        //Relacion Muchos a uno con Rol
     
+  
     public Rol getRol(){
         return rol;
     }
