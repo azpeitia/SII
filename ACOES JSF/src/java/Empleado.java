@@ -56,6 +56,10 @@ public class Empleado implements Serializable {
     private List<Apadrinamientos> apadrinamientos;
     @ManyToOne
     private Rol rol;        //Relacion Muchos a uno con Rol
+    
+    public Rol getRol(){
+        return rol;
+    }
 
     public void setPass(String pass){
       this.pass = pass;
@@ -171,14 +175,14 @@ public class Empleado implements Serializable {
     }
     
     
-    public String getpassword() {
+    public String getPassword() {
         return password;
     }
 
     /**
      * @param password the nombre to set
      */
-    public void setpassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
