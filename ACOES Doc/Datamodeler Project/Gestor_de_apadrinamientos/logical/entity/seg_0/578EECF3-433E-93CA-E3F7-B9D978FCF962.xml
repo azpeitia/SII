@@ -92,9 +92,6 @@
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
 <pk>true</pk>
-<usedAttributes>
-<attributeRef>D18C3685-2CC1-8475-FA93-090539D5C12B</attributeRef>
-</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>

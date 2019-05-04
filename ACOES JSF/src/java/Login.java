@@ -16,11 +16,14 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@ManagedBean
+@Named(value = "login")
 @RequestScoped
 public class Login {
 
+    
     private String username;
     private String password;
     private List<Empleado> empleados = new ArrayList<>();
