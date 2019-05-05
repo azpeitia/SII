@@ -1,12 +1,40 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+        
     <h:head>
-        <title>Facelet Title</title>
+    <title>Lista de niños/jóvenes</title>
     </h:head>
     <h:body>
-        Hello from Facelets
-    </h:body>
+            
+            <h:form>
+                <h:dataTable value="#{listarnjcontroller.getNJ}" var="nj" border="2"
+			cellspacing="1" cellpadding="1">
+                        <h:column>
+                                       <f:facet name="header">Nombre</f:facet>
+                            #{nj.nj.nombre} 
+                        </h:column>
+                    <h:column>
+                                       <f:facet name="header">Primer apellido</f:facet>
+                            #{nj.nj.apellido1}
+                        </h:column>
+                    <h:column>
+                                       <f:facet name="header">Segundo apellido</f:facet>
+                            #{nj.nj.apellido2}
+                        </h:column>
+                        
+                        
+
+
+		</h:dataTable>
+            </h:form>
+       
+                
+        </h:body>
+    
 </html>
 

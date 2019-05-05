@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3D69320A-FF05-5A20-BD08-41B9BBE75137" name="Historial_apadrinamientos">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="89E53316-0DB5-7007-FB7B-EC0DAFE4D692" name="Solicitud">
 <createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:21:56 UTC</createdTime>
+<createdTime>2019-05-05 12:53:40 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
@@ -15,33 +15,21 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_h_apadrinamientos" id="5C26F2F3-8AD6-40E3-40F9-1FAB77EDC9FC">
+<Attribute name="id" id="8CD4A116-F0F8-76B5-1D53-92B418C49FEF">
 <createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:23:13 UTC</createdTime>
+<createdTime>2019-05-05 12:55:17 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fecha_alta" id="5EAEDCFC-1C74-A19F-0E51-4CEFD467F1F7">
+<Attribute name="fecha" id="F3D0EA36-692A-2798-31DF-6C2932EA7888">
 <createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:22:28 UTC</createdTime>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="fecha_baja" id="21228741-3D50-09E8-AFFD-4964DBE52196">
-<createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:22:51 UTC</createdTime>
+<createdTime>2019-05-05 12:55:40 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
@@ -51,15 +39,15 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_apadrinamiento" id="3D9885EB-0D35-CDF0-3447-36286FE9B773">
+<Attribute name="nif_socio" id="469255D0-3149-E024-7411-D63503BAD9A3">
 <createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:30:21 UTC</createdTime>
-<generatorID>AA28E9DC-73B3-E5EC-B4C0-63673EB1FC51</generatorID>
+<createdTime>2019-05-05 12:56:05 UTC</createdTime>
+<generatorID>264A1DB0-91A2-7717-402A-FD72BCF4D73F</generatorID>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
-<referedAttribute>D18C3685-2CC1-8475-FA93-090539D5C12B</referedAttribute>
+<referedAttribute>4D6B74CF-F355-EDA6-2C26-47D40D9C84A3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -67,16 +55,16 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A43B737F-8E38-0C70-1A10-AB93D5188D64" name="historial_apadrinamientos PK">
+<identifier id="FB7DDF1A-140E-2F11-2EE1-691325A98876" name="Solicitud PK">
 <createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:22:49 UTC</createdTime>
+<createdTime>2019-05-05 12:55:37 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>5C26F2F3-8AD6-40E3-40F9-1FAB77EDC9FC</attributeRef>
+<attributeRef>8CD4A116-F0F8-76B5-1D53-92B418C49FEF</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

@@ -1,12 +1,48 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+        
     <h:head>
-        <title>Facelet Title</title>
+    <title>Solicitudes</title>
     </h:head>
     <h:body>
-        Hello from Facelets
-    </h:body>
-</html>
+        <c:if test="#{empty solicitudcontroller.solicitudes }">
+            <p>No hay solicitudes para mostrar</p>
+        </c:if>
+       
+        <c:if test="#{not empty solicitudcontroller.solicitudes}">
+            
+            <h3>Solicitudes pendientes: </h3>
+            <h:form>
+                <h:dataTable value="#{solicitudcontroller.solicitudes}" var="sol" border="2"
+			cellspacing="1" cellpadding="1">
+                        <h:column>
+                                        <f:facet name="header">Socio</f:facet>
+                            #{sol.socio.nombre} #{sol.socio.apellido1} #{sol.socio.apellido2} 
+                        </h:column>
+                        <h:column>
+                                        <f:facet name="header">Fecha</f:facet>
+                            #{sol.fecha}
+                        </h:column>
+                        
+                        <!-- 
+                            Con persistencia este botón debe agregar un nuevo apadrianmiento
+                        -->
+                        <h:column>
+                                        <f:facet name="header">Dar Alta</f:facet>
+                                        <h:button value="Alta" outcome="empleado.xhtml"/>
+                        </h:column>
 
+		</h:dataTable>
+            </h:form>
+        </c:if>
+        
+        <h:button value="Volver a home" outcome="empleado.xhtml"/>
+        
+        </h:body>
+    
+</html>

@@ -1,0 +1,6 @@
+-Añadir entidad Solicitud al modelo lógico
+-Añadir entidad JPA al proyecto software
+	-Añadir una lista de solicitudes al socio
+	-Añadir un socio a la entidad solicitud
+	-Queda establecida la relacion 1-muchos entre solicitud y socio
+	-Queda reflejado el requisito Solicitar Apadrianmientos de los Socios.

@@ -1,12 +1,77 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Registro de Socio</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+                <h:form id="registro">
+                    <h:panelGrid columns="3">
+                        <h:outputText value="NIF"/>
+                        <h:inputText id="nif" value="#{registro.socio.nif_socio}"/>
+                        <h:message for="NIF"/>
+                        <h:outputText value="Nombre"/>
+                        <h:inputText id="nombre" value="#{registro.socio.nombre}"/>
+                        <h:message for="Nombre"/>
+                        <h:outputText value="Primer apellido"/>
+                        <h:inputText id="apellido1" value="#{registro.socio.apellido1}"/>
+                        <h:message for="Primer apellido"/>
+                        <h:outputText value="Segundo apellido"/>
+                        <h:inputText id="apellido2" value="#{registro.socio.apellido2}"/>
+                        <h:message for="Segundo apellido"/>
+                        <h:outputText value="E-mail:"/>
+                        <h:inputText id="email" value="#{registro.socio.email}" required="true"
+                                     validatorMessage="Compruebe que ha introducido un e-mail correcto">
+                            <f:validateRegex pattern=".+@.+"/>
+                        </h:inputText>
+                        <h:message for="email"/>
+                        
+                         <h:outputText value="Dirección"/>
+                        <h:inputText id="direccion" value="#{registro.socio.direccion}"/>
+                        <h:message for="direccion"/>
+                        
+                        <h:outputText value="Población"/>
+                        <h:inputText id="pobacion" value="#{registro.socio.pobacion}"/>
+                        <h:message for="poblacion"/>
+                        
+                        <h:outputText value="C.P"/>
+                        <h:inputText id="cp" value="#{registro.socio.cp}"/>
+                        <h:message for="cp"/>
+                        
+                        <h:outputText value="Provincia"/>
+                        <h:inputText id="provincia" value="#{registro.socio.provincia}"/>
+                        <h:message for="provincia"/>
+                        
+                        <h:outputText value="Telefono"/>
+                        <h:inputText id="telefono" value="#{registro.socio.telefono}"/>
+                        <h:message for="telefono"/>
+                        
+                        <h:outputText value="Fecha de Nacimiento"/>
+                        <h:inputText value="#{registro.socio.fecha_nacimiento}">
+                            <f:convertDateTime pattern="MM/dd/yy"/>
+                        </h:inputText>
+                        <h:message for="nacimiento"/>
+                        
+                        <h:outputText value="Movil"/>
+                        <h:inputText id="movil" value="#{registro.socio.movil}"/>
+                        <h:message for="movil"/>
+                        
+                        <h:outputText value="Contraseña:"/>
+                        <h:inputSecret id="pass" value="#{registro.socio.password}" required="true"/>
+                        <h:message for="password"/>
+                        <h:outputText value="Repita contraseña:"/>
+                        <h:inputSecret id="repass" value="#{registro.repass}" required="true"/>
+                        <h:message for="repass"/>
+                        <h:commandButton value="Crear usuario" action="#{registro.registrarUsuario()}"/>
+                        <h:link outcome="login.xhtml">Volver a la página de login</h:link>
+                    </h:panelGrid>
+                    <h:messages/>
+                    
+                </h:form>
+
     </h:body>
 </html>
 

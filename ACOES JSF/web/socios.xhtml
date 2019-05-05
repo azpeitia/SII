@@ -1,14 +1,52 @@
-
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
     <h:head>
-
+    	<h:outputStylesheet library="css" name="table-style.css"  />
     </h:head>
     <h:body>
-        <c:forEach items="#"
-    </h:body>
-</html>
+    	
+    	<h1>Socios</h1>
+    	    <h:form id="myform">
 
+    	<h:dataTable value="#{socio.personList}" var="s"
+    		styleClass="person-table"
+    		headerClass="person-table-header"
+    		rowClasses="person-table-odd-row,person-table-even-row"
+    	>
+
+	<h:column>
+    		<f:facet name="header">No</f:facet>#{socio.personList.rowIndex + 1}
+    	</h:column>
+                    
+    		
+    	<h:column>
+    		<f:facet name="header">Nombre</f:facet>#{s.nombre}
+    	</h:column>
+    			
+                    
+                    
+    	<h:column>
+    		<f:facet name="header">Apellido1</f:facet>#{s.apellido1}
+    	</h:column>
+    		
+                    
+    	<h:column>
+    		<f:facet name="header">Apellido2</f:facet>#{s.apellido2}
+    	</h:column>
+                 
+        <h:column>
+    		<h:commandButton value="Mostrar" action="#{socio.mostrar}" />
+        </h:column>
+
+    	</h:dataTable>
+    	</h:form>
+	
+    </h:body>
+
+</html>

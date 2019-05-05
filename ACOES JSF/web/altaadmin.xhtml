@@ -54,8 +54,15 @@
     
     <h:outputText value="Observaciones: "/>
     <h:inputText label="observaciones" value="#{altaemp.emp.observaciones}" /><br/><br/>
+<<<<<<< HEAD
     
      <h:commandButton value="Confirmar" action="#{altaemp.confirmar}" /> 
+=======
+    </h:form>
+    <c:set var ="#{altaemp.emp.getRol().nombre}" scope="sesion" value="admin"/>
+    
+    <h:commandButton value="Confirmar" action="#{altaemp.confirmar}" />
+>>>>>>> 33acdfe86265ae8a766fcad8ab2c80b1812be67a
     </h:body>
 </html>
 
