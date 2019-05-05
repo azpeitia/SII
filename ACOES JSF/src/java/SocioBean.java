@@ -18,6 +18,7 @@ import javax.inject.Named;
 public class SocioBean implements Serializable{
     
     private Socio socio;
+    private boolean quiereap;
     
     public SocioBean(){
         

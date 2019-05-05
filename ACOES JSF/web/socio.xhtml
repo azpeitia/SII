@@ -3,10 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Bien venido <h:outputLabel value="#{socio.socio.nombre}"</title>
+        
+        <h:commandButton value="Solicitar Apadrinamiento" action="solicitarap.xhtml"/>
+        <br></br>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:button outcome="login.xhtml" value="Dar de baja"/>
+        <h:button outcome="listarap.xhtml" value="Lita de apadrinamientos actuales"/>
+        <br></br>
+        <h:commandButton value="Modificar mis datos" action="modificardatos.xhtml" />
     </h:body>
 </html>
 

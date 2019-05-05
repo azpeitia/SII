@@ -4,31 +4,38 @@
  * and open the template in the editor.
  */
 
-
 import java.io.IOException;
+import javax.inject.Named;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 
 /**
  *
- * @author Dave
+ * @author dosgr
  */
-public class AltaEmp {
+@Named(value = "mE")
+@RequestScoped
+public class MostrarEmpleado {
+
+    private Empleado emp ;
     
-    private Empleado emp;
-        
-    public AltaEmp() {
+    public MostrarEmpleado() {
         
     }
     
-    public void confirmar() {
+        public void confirmar() {
         FacesContext context = FacesContext.getCurrentInstance();
-        emp.setNif_emp(Long.MIN_VALUE);                             //Una vez haya permanencia usar identificador unico
         try {
-            context.getExternalContext().redirect("admin.xhtml");
+            context.getExternalContext().redirect("socio.xhtml");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
 
+    public Empleado getEmp() {
+        return emp;
+    }
+        
+
+    
 }

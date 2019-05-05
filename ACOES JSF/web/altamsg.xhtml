@@ -3,10 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Alta de mensajes</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:outputText value="IdMensaje: "/>
+        <h:outputText value="Id del apadirnamiento: "/>
+        <h:inputText label="AP" value="#{msg.msg.ap.id_apadrinamiento}" /><br/><br/>     
+        
+        <h:outputText value="Fecha de emisión: "/>
+        <h:inputText label="DATE" value="#{msg.msg.fecha}" /><br/><br/>  
+        
+        <h:button outcome="admin.xhtml" value ="Dar de alta" />
     </h:body>
 </html>
 
