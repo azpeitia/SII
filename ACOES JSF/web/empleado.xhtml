@@ -12,8 +12,8 @@
             <br />
             <br />
             <br />
-
-            <h:button value="Solicitudes Pendientes" outcome="solicitudes.xhtml"/>
+            <h:form id="myform">
+            <h:commandButton value="Solicitudes Pendientes" action="#{solicitudController.testSolicitudes()}"/>
             <br />
             <h:button value="Lista de Admins" outcome="admins.xhtml"/>
             <br />
@@ -24,6 +24,7 @@
             <h:button value="Lista de Apadrinamientos" outcome="listarap.xhtml"/>
             <br />
             <h:button value="Datos Personales" outcome="mostrardatosemp.xhtml"/>
+            </h:form>
         </h:body>
     </ui:define>
     
