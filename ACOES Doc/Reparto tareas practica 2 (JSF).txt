@@ -1,4 +1,4 @@
-Listado de las vistas y quien las va a implementar.
+﻿Listado de las vistas y quien las va a implementar.
 
 A = Antonio
 S = Santi
@@ -14,18 +14,18 @@ J = Javi
 5-empleado			J
 6-admin				A
 7-listarap			S
-8-midificardatos	F
-9-solicitarap		M
-10-solicitudes		J
-11-empleados		A
+8-modificardatos		F
+9-solicitarap			M
+10-solicitudes			J
+11-empleados			A
 12-admins			S
 13-socios			F
-14-mostrardatosemp	M
+14-mostrardatosemp		M
 15-altanj			J
 16-listarnj			A
 17-altamsg			S
 18-altaemp			F
-19-altaadmin		M
+19-altaadmin			M
 20-msgs				J
 
 
@@ -34,9 +34,9 @@ user				J
 admin				J
 socio				J
 empleado			J
-nj					J
-msg					J
-ap					J
+nj				J
+msg				J
+ap				J
 
 -Antonio
 -Santi

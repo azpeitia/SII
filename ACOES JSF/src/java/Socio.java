@@ -273,17 +273,17 @@ public class Socio implements Serializable {
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-    /*
     
-    public String getpassword() {
+    
+    public String getPassword() {
         return password;
     }
 
     /**
      * @param password the nombre to set
-     *//*
-    public void setpassword(String password) {
+     */
+    public void setPassword(String password) {
         this.password = password;
-    }*/
+    }
     
 }

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="rel_ap_msgs" directorySegmentName="seg_0" id="8F6A640D-7E05-BA21-921C-EDBE5B8B4A2C">
+<createdBy>Antonio</createdBy>
+<createdTime>2019-05-04 16:45:33 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<sourcePk>8CD2EEE5-B2D8-3A3C-007A-0358C12CD008</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>578EECF3-433E-93CA-E3F7-B9D978FCF962</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AE5BFE4F-03FA-DAED-1EB6-7A998FC95B9D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

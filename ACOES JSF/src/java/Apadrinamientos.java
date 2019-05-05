@@ -42,6 +42,8 @@ public class Apadrinamientos implements Serializable {
     @OneToMany (mappedBy="apadrinamiento")
     private List<Historial_apadrinamientos> h_apadrinamientos;      //Relación Uno a Muchos con Historial de Apadrinameitnos
     
+    @OneToMany (mappedBy="ap")
+    private List<Mensaje> msgs;
     
 
     
