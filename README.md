@@ -4,7 +4,7 @@ Student web project for Sistemas de Información para Internet signature.
 ***ACOES Doc***  
   Documentación del proyecto  
     
-***ACOES*** 
+***ACOES***   
   Proyecto Netbeans con el primera práctica grupal.  
       
 ***ACOES JSF***  
