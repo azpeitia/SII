@@ -31,5 +31,13 @@ public class SocioBean implements Serializable{
     public void setSocio(Socio socio) {
         this.socio = socio;
     }
+
+    public boolean isQuiereap() {
+        return quiereap;
+    }
+
+    public void setQuiereap(boolean quiereap) {
+        this.quiereap = quiereap;
+    }
     
 }
