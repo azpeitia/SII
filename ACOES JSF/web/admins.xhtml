@@ -10,7 +10,7 @@
     <ui:define name="content">
         <h:body>
        <div class="container-fluid">
-        <h:dataTable id="Admin" value="pepe" var="ap" border="1">
+           <h:dataTable id="Admin" value="#{adminsController.getlistadmins}" var="ap" border="1">
             <h:column>
                 <f:facet name="header">
                     <h:outputText value="Nombre"/>
