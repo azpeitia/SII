@@ -4,6 +4,8 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <ui:define name="title">Home para Empleado</ui:define>
+    
+    <h:body></h:body>
     <ui:define name="content">
         
         <p>Hola <h:outputText value="#{emp.nombre}"/>!!</p>
@@ -22,6 +24,7 @@
         <h:button value="Lista de Apadrinamientos" outcome="listarap.xhtml"/>
         <br />
         <h:button value="Datos Personales" outcome="mostrardatosemp.xhtml"/>
-        
+       
     </ui:define>
+    </h:body>
 </ui:composition>

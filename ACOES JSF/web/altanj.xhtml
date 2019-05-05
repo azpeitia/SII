@@ -1,12 +1,49 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
     <h:head>
-        <title>Facelet Title</title>
+        <title>Dar de alta a un niño o joven</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h1>Dar de alta un joven o niño</h1>
+        <h:form id="myform">
+            
+           
+            <h:messages globalOnly="true" style="color:red;margin:8px;" />
+
+            <h:outputText value="Nombre: "/>
+            <h:inputText label="nombre" value="#{altanj.nj.nombre}" /><br/><br/>
+
+            <h:outputText value="Apellido 1: "/>
+            <h:inputText label="apellido1" value="#{altanj.nj.apellido1}" /><br/><br/>
+
+            <h:outputText value="Apellido 2: "/>
+            <h:inputText label="apellido2" value="#{altanj.nj.apellido2}" /><br/><br/>
+
+            <h:outputText value="Estado: "/>
+            <h:inputText label="estado" value="#{altanj.nj.estado}" /><br/><br/>
+
+            <h:outputText value="Fecha de nacimiento: "/>
+            <h:inputText label="direccion" value="#{altanj.nj.fecha_nacimiento}" /><br/><br/>
+
+            <h:outputText value="Curso: "/>
+            <h:inputText label="poblacion" value="#{altanj.nj.grado_curso}" /><br/><br/>
+
+            <h:outputText value="Población: "/>
+            <h:inputText label="cp" value="#{altanj.nj.procedencia}" /><br/><br/>
+
+            <h:outputText value="Colonia: "/>
+            <h:inputText label="provincia" value="#{altanj.nj.colonia_actual}" /><br/><br/>
+
+            <h:outputText value="Observaciones: "/>
+            <h:inputText label="telefono" value="#{altanj.nj.observaciones}" /><br/><br/>
+
+
+            <h:commandButton value="Confirmar" action="#{altanj.confirmar}" />
+        </h:form>
     </h:body>
 </html>
-

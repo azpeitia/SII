@@ -52,6 +52,10 @@ public class Socio implements Serializable {
     @OneToMany (mappedBy="socio")
     private List<Apadrinamientos> apadrinamientos;      //Relación Uno a Muchos con Apadrinamientos
     
+    @OneToMany (mappedBy="socio")
+    private List<Solicitud> solicitudes;
+    
+    
     public List<Apadrinamientos> getapadrinamientos(){
         return apadrinamientos;
     }
