@@ -16,6 +16,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 
 
 @ManagedBean
@@ -28,26 +29,10 @@ public class Login {
     private List<Empleado> empleados = new ArrayList<>();
     private List<Socio> socios = new ArrayList<>();
     
-    /*
-    public void login() {
-
-            FacesContext context = FacesContext.getCurrentInstance();
-
-            if(this.username.equals("admin") && this.password.equals("admin")){
-                context.getExternalContext().getSessionMap().put("user", username);
-                try {
-                    context.getExternalContext().redirect("socio.xhtml");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            else  {
-                context.addMessage(null, new FacesMessage("Authentication Failed. Check username or password."));
-            } 
-        }
-    */
     
     public void login() {
+        
+        
         Socio s = new Socio();
         s.setNombre("pepe");
         s.setPassword("asdf");

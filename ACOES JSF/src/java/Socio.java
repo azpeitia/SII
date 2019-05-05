@@ -55,6 +55,15 @@ public class Socio implements Serializable {
     @OneToMany (mappedBy="socio")
     private List<Solicitud> solicitudes;
     
+    public Socio(String n, String a1, String a2) {
+        nombre = n;
+        apellido1 = a1;
+        apellido2 = a2;
+    }
+
+    Socio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public List<Apadrinamientos> getapadrinamientos(){
         return apadrinamientos;
