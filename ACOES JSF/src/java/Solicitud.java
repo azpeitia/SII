@@ -29,7 +29,6 @@ public class Solicitud {
     private Long id;
     @Temporal(TemporalType.DATE)
     private Date fecha;
-    private String status;
     
     @ManyToOne
     private Socio socio;
@@ -54,14 +53,6 @@ public class Solicitud {
 
     public void setFecha(Date fecha) {
         this.fecha = fecha;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public Socio getSocio() {

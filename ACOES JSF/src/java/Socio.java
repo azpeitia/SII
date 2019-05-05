@@ -60,7 +60,7 @@ public class Socio implements Serializable {
         return apadrinamientos;
     }
     
-    public void setApadhist(List<Apadrinamientos> a2){
+    public void setApadlist(List<Apadrinamientos> a2){
         apadrinamientos = a2;
     }
     
