@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
 /*
@@ -25,9 +27,14 @@ import javax.inject.Named;
 @SessionScoped
 public class solicitudController implements Serializable{
     
-    private List<Solicitud> solicitudes;
+    private ArrayList<Solicitud> solicitudes;
     
     public solicitudController(){
+        
+    }
+    
+   
+    public String testSolicitudes(){
         Socio user=new Socio();
         user.setApellido1("Azpeitia");
         user.setApellido2("Muñoz");
@@ -40,16 +47,15 @@ public class solicitudController implements Serializable{
         sol.setId(Long.MIN_VALUE);
         sol.setSocio(user);
         
-        //solicitudes.add(sol);
+        solicitudes.add(sol);
+        return "solicitudes.xhtml";
     }
     
-   
-
     public List<Solicitud> getSolicitudes() {
         return solicitudes;
     }
 
-    public void setSolicitudes(List<Solicitud> solicitudes) {
+    public void setSolicitudes(ArrayList<Solicitud> solicitudes) {
         this.solicitudes = solicitudes;
     }
     

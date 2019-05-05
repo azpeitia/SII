@@ -16,6 +16,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 
 
 @ManagedBean
@@ -28,7 +29,10 @@ public class Login {
     private List<Empleado> empleados = new ArrayList<>();
     private List<Socio> socios = new ArrayList<>();
     
+    
     public void login() {
+        
+        
         Socio s = new Socio();
         s.setNombre("pepe");
         s.setPassword("asdf");
