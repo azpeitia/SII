@@ -51,20 +51,6 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="id_1" id="1DFF3BD9-0DAB-DD46-7EDC-1C8C15134D58">
-<createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:30:21 UTC</createdTime>
-<generatorID>AA28E9DC-73B3-E5EC-B4C0-63673EB1FC51</generatorID>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<referedAttribute>F1FFFE6E-7CF2-DF61-F40C-4EE756AE7503</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="id_apadrinamiento" id="3D9885EB-0D35-CDF0-3447-36286FE9B773">
 <createdBy>Javier</createdBy>
 <createdTime>2019-04-02 14:30:21 UTC</createdTime>

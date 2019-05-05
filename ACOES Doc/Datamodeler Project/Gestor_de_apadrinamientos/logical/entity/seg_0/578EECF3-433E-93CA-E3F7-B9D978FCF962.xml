@@ -82,6 +82,19 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Status" id="F6AC9124-57A2-E394-EA27-F3ADF3CC1777">
+<createdBy>Javier</createdBy>
+<createdTime>2019-05-05 16:43:57 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="8CD2EEE5-B2D8-3A3C-007A-0358C12CD008" name="apadrinamientos PK">
@@ -92,6 +105,9 @@
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<usedAttributes>
+<attributeRef>D18C3685-2CC1-8475-FA93-090539D5C12B</attributeRef>
+</usedAttributes>
 </identifier>
 </identifiers>
 </Entity>
