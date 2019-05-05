@@ -30,7 +30,7 @@ public class Apadrinamientos implements Serializable {
     private Long id_apadrinamiento;
     @Temporal(TemporalType.DATE)
     private Date fecha_inicio;
-    
+    private String status;
     /*----REALACIONES---*/
     @ManyToOne              //Relación Muchos a uno con Empleado
     private Empleado empleado;
@@ -61,6 +61,14 @@ public class Apadrinamientos implements Serializable {
     
     public void setId_apadrinamiento(Long id) {
         this.id_apadrinamiento = id;
+    }
+    
+     public String getStatus() {
+        return status;
+    }
+    
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override
