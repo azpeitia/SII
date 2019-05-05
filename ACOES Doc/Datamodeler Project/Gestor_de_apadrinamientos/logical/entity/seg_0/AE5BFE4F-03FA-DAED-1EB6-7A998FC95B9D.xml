@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE5BFE4F-03FA-DAED-1EB6-7A998FC95B9D" name="Mensajes">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE5BFE4F-03FA-DAED-1EB6-7A998FC95B9D" name="Mensaje">
 <createdBy>Antonio</createdBy>
 <createdTime>2019-05-04 16:42:51 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
