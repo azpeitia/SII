@@ -50,7 +50,9 @@
                         <h:message for="telefono"/>
                         
                         <h:outputText value="Fecha de Nacimiento"/>
-                        <input type="date" id="fecha_nacimiento" value="#{registro.socio.fecha_nacimiento}" /> 
+                        <h:inputText value="#{registro.socio.fecha_nacimiento}">
+                            <f:convertDateTime pattern="MM/dd/yy"/>
+                        </h:inputText>
                         <h:message for="nacimiento"/>
                         
                         <h:outputText value="Movil"/>
