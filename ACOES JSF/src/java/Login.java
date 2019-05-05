@@ -16,10 +16,9 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.inject.Inject;
-import javax.inject.Named;
 
-@Named(value = "login")
+
+@ManagedBean
 @RequestScoped
 public class Login {
 
@@ -30,10 +29,12 @@ public class Login {
     private List<Socio> socios = new ArrayList<>();
     
     
+    
     public void login() {
-        
+                
         FacesContext context = FacesContext.getCurrentInstance();
         int cont = 0;
+        
         while(cont < empleados.size()  && empleados.get(cont).getNombre() != this.username) {
             cont++;
         }
@@ -65,11 +66,11 @@ public class Login {
                     e.printStackTrace();
                 }
             } else {
-                context.addMessage(null, new FacesMessage("Authentication Failed. Check username or password."));
+                context.addMessage(null, new FacesMessage("Error al autenticar"));
             }
-        } 
+        }
     }
-
+    
     public void logout() {
         FacesContext context = FacesContext.getCurrentInstance();
         context.getExternalContext().invalidateSession();
