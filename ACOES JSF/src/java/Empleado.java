@@ -61,6 +61,12 @@ public class Empleado implements Serializable {
     public Rol getRol(){
         return rol;
     }
+    
+    public void setRol(String rolName){
+        Rol r = new Rol();
+        r.setNombre(rolName);
+        this.rol = r;
+    }
 
     public void setPass(String pass){
       this.pass = pass;
