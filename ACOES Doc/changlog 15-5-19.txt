@@ -1,0 +1,20 @@
+Entidad socio eliminada
+Entidad empleado cambiada a entidad usuario
+Atributos de usuario:
+	dni
+	password
+	nombre
+	apellido1
+	apellido2
+	telefono
+	email
+	fecha_nacimiento
+	fecha_alta
+	rol
+	nick
+	
+Atributos de rol:
+	eliminado: nombre
+	cambiado: id_rol -> rol
+
+Añadida la relación solicitud con usuario (Uno a muchos)
