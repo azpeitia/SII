@@ -53,5 +53,19 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="dni" id="B4308BFF-CC7B-DC53-BA56-C8640338E10C">
+<createdBy>Javier</createdBy>
+<createdTime>2019-05-15 18:19:46 UTC</createdTime>
+<generatorID>8F6A640D-7E05-BA21-921C-EDBE5B8B4A2C</generatorID>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<referedAttribute>38219054-EA3E-945B-2389-16321B6E2D0A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

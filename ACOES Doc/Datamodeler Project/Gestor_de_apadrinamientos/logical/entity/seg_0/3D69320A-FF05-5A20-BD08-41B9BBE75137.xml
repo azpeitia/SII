@@ -65,6 +65,20 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="dni" id="51552C75-FCF3-5CB3-895C-D5755DE300A3">
+<createdBy>Javier</createdBy>
+<createdTime>2019-05-15 18:19:46 UTC</createdTime>
+<generatorID>AA28E9DC-73B3-E5EC-B4C0-63673EB1FC51</generatorID>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<referedAttribute>38219054-EA3E-945B-2389-16321B6E2D0A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A43B737F-8E38-0C70-1A10-AB93D5188D64" name="historial_apadrinamientos PK">
