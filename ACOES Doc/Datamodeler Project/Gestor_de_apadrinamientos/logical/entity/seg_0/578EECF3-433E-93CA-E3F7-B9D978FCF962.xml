@@ -54,21 +54,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nif_socio" id="A01FCC8C-6C67-A871-498F-38D0ECE4C1EE">
-<createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:06:47 UTC</createdTime>
-<generatorID>94ECADBD-FADF-913F-D1E2-02A003FDAA16</generatorID>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<referedAttribute>4D6B74CF-F355-EDA6-2C26-47D40D9C84A3</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nif_emp" id="38219054-EA3E-945B-2389-16321B6E2D0A">
+<Attribute name="dni" id="38219054-EA3E-945B-2389-16321B6E2D0A">
 <createdBy>Javier</createdBy>
 <createdTime>2019-04-02 14:17:41 UTC</createdTime>
 <generatorID>8F0A7EAF-4EC1-B58E-F419-537166E689FD</generatorID>
@@ -107,6 +93,7 @@
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>D18C3685-2CC1-8475-FA93-090539D5C12B</attributeRef>
+<attributeRef>38219054-EA3E-945B-2389-16321B6E2D0A</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

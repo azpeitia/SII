@@ -39,15 +39,15 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nif_socio" id="469255D0-3149-E024-7411-D63503BAD9A3">
+<Attribute name="dni" id="30A104C0-1B5D-DB3A-3ABC-71CB887E7963">
 <createdBy>Javier</createdBy>
-<createdTime>2019-05-05 12:56:05 UTC</createdTime>
-<generatorID>264A1DB0-91A2-7717-402A-FD72BCF4D73F</generatorID>
+<createdTime>2019-05-15 18:26:46 UTC</createdTime>
+<generatorID>C4F71A50-2D16-D673-67E5-A9BB627320D8</generatorID>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
-<referedAttribute>4D6B74CF-F355-EDA6-2C26-47D40D9C84A3</referedAttribute>
+<referedAttribute>9022EFEC-DEF9-479F-3B7E-2C3D7F8984E9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

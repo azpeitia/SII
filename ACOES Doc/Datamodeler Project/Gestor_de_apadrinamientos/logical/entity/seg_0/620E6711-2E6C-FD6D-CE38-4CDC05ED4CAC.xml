@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="620E6711-2E6C-FD6D-CE38-4CDC05ED4CAC" name="Empleado">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="620E6711-2E6C-FD6D-CE38-4CDC05ED4CAC" name="Usuario">
 <createdBy>dosgr</createdBy>
 <createdTime>2019-04-01 19:12:11 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nif_emp" id="9022EFEC-DEF9-479F-3B7E-2C3D7F8984E9">
+<Attribute name="dni" id="9022EFEC-DEF9-479F-3B7E-2C3D7F8984E9">
 <createdBy>dosgr</createdBy>
 <createdTime>2019-04-01 19:18:03 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
@@ -30,6 +30,18 @@
 <Attribute name="password" id="C7B94C0E-E99F-5F4D-B41B-CED02AF1A30D">
 <createdBy>Javier</createdBy>
 <createdTime>2019-04-04 17:31:07 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nick" id="0C82F355-F662-CE84-091F-262E1D8D5E96">
+<createdBy>Javier</createdBy>
+<createdTime>2019-05-15 18:20:15 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
@@ -70,7 +82,6 @@
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -83,7 +94,6 @@
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -92,18 +102,6 @@
 <Attribute name="telefono" id="7941B4C0-C65C-6C97-FE23-453F6579DF95">
 <createdBy>dosgr</createdBy>
 <createdTime>2019-04-01 19:18:27 UTC</createdTime>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="movil" id="B5613AD8-4989-1D94-58D3-8E70903A5FBC">
-<createdBy>dosgr</createdBy>
-<createdTime>2019-04-01 19:18:33 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
@@ -150,33 +148,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="poblacion" id="7A1413BD-207A-D491-E36F-5FE54D025650">
-<createdBy>dosgr</createdBy>
-<createdTime>2019-04-01 19:19:12 UTC</createdTime>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="provincia" id="B0BA0989-D9E0-2AD5-4ED1-09F8CDB09486">
-<createdBy>dosgr</createdBy>
-<createdTime>2019-04-01 19:19:19 UTC</createdTime>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="id_rol" id="C62D0449-D227-C697-9627-84640B211274">
+<Attribute name="rol" id="C62D0449-D227-C697-9627-84640B211274">
 <createdBy>Javier</createdBy>
 <createdTime>2019-04-02 14:36:56 UTC</createdTime>
 <generatorID>49C5C53E-8DE7-B560-215C-D75B1A07A924</generatorID>
@@ -192,7 +164,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="816E547C-3AC2-8CB6-9258-68BD2767CF0A" name="Empleados PK">
+<identifier id="816E547C-3AC2-8CB6-9258-68BD2767CF0A" name="dniPK">
 <createdBy>dosgr</createdBy>
 <createdTime>2019-04-01 19:18:06 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
@@ -200,8 +172,21 @@
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>9022EFEC-DEF9-479F-3B7E-2C3D7F8984E9</newElementsIDs>
 <usedAttributes>
 <attributeRef>9022EFEC-DEF9-479F-3B7E-2C3D7F8984E9</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="C21182C6-CC78-3E6D-FDCA-D864A5268E75" name="Nick">
+<createdBy>Javier</createdBy>
+<createdTime>2019-05-15 18:24:13 UTC</createdTime>
+<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
+<engineerTo>
+<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
+</engineerTo>
+<newElementsIDs>0C82F355-F662-CE84-091F-262E1D8D5E96</newElementsIDs>
+<usedAttributes>
+<attributeRef>0C82F355-F662-CE84-091F-262E1D8D5E96</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

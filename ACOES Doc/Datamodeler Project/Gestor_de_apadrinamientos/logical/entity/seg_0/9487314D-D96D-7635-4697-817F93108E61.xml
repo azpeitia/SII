@@ -15,21 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id_rol" id="EF00F7F6-D361-E480-9473-CAC8B897B09D">
+<Attribute name="rol" id="EF00F7F6-D361-E480-9473-CAC8B897B09D">
 <createdBy>Javier</createdBy>
 <createdTime>2019-04-02 14:35:55 UTC</createdTime>
-<ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
-<engineerTo>
-<item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nombre" id="E88193F9-6968-FB35-2518-088D06EEED30">
-<createdBy>Javier</createdBy>
-<createdTime>2019-04-02 14:36:06 UTC</createdTime>
 <ownerDesignName>Gestor_de_apadrinamientos</ownerDesignName>
 <engineerTo>
 <item key="385C6E8F-C8DF-0180-C4CE-F36ACBFC00E5" value="true"/>
