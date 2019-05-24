@@ -177,6 +177,11 @@ public class Usuario implements Serializable {
         return fecha_nacimiento;
     }
 
+    
+    public void setFecha_nacimiento(Date fecha_nacimiento) {
+        this.fecha_nacimiento=fecha_nacimiento;
+    }
+    
 
     /**
      * @return the email
@@ -198,7 +203,10 @@ public class Usuario implements Serializable {
     public Date getFecha_alta() {
         return fecha_alta;
     }
-
+    
+    public void setFecha_alta(Date fecha_alta) {
+        this.fecha_alta=fecha_alta;
+    }
     
     
     public String getPassword() {
