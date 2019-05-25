@@ -6,6 +6,7 @@
 package acoesee.negocio;
 
 
+import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import java.util.Random;
 import javax.ejb.Stateless;
@@ -37,5 +38,21 @@ public class NegocioImpl implements Negocio {
 
     }
     
+    @Override
+    public void eliminarAp(Apadrinamientos ap) {
+        em.remove(em.merge(ap));
+    }
+    
+    @Override
+    public void modificar(Usuario u) {
+        compruebaLogin(u.getUsuario());
+        
+        em.merge(u);
+    }
 
+    @Override
+    public void eliminarUsuario(Usuario user) {
+        compruebaLogin(user.getUsuario());
+        em.remove(em.merge(user));
+        em.flush();    }
 }
