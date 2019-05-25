@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+        
+    <h:head>
+    <title>Lista de empleados</title>
+    </h:head>
+    <h:body>
+            <c:choose>
+                <c:when test="#{infoSesion.admin || infoSesion.empleado}">
+                    
+                     <h:form>
+                         
+                         
+                         
+                         <h:dataTable value="#{infoSesion.empleados}" var="e" border="2"
+                                cellspacing="1" cellpadding="1">
+                             
+                            <h:column>
+                                <f:facet name="header">DNI</f:facet>
+                                #{e.dni} 
+                            </h:column>
+                             
+                            <h:column>
+                                <f:facet name="header">Nombre</f:facet>
+                                #{e.nombre} 
+                            </h:column>
+                             
+                            <h:column>
+                                <f:facet name="header">Primer apellido</f:facet>
+                                #{e.apellido1} 
+                            </h:column>
+                            
+                            <h:column>
+                                <f:facet name="header">Segundo apellido</f:facet>
+                                #{e.apellido2} 
+                            </h:column>
+
+
+                             
+                            <h:column>
+                                <f:facet name="header">Nick</f:facet>
+                                #{e.nick} 
+                            </h:column>
+
+                            <h:column>
+                                <f:facet name="header">Dirección:</f:facet>
+                                #{e.direccion} 
+                            </h:column>
+                             
+                            <h:column>
+                                <f:facet name="header">Telefono:</f:facet>
+                                #{e.telefono} 
+                            </h:column>
+                             
+                            <h:column>
+                                <f:facet name="header">email</f:facet>
+                                #{e.email} 
+                            </h:column>
+                             
+                         </h:dataTable>
+                         
+
+                         
+                         
+                    </h:form>
+                    
+                    <c:choose>
+                        <c:when test="#{infoSesion.admin}">
+                            
+                            <div class = "container-fluid">
+                                <h:button outcome="admin.xhtml" value ="Volver" />
+                            </div>
+                            
+                        </c:when>
+                        <c:otherwise>
+                            <div class = "container-fluid">
+                                <h:button outcome="empleado.xhtml" value ="Volver" />
+                            </div>
+                            
+                        </c:otherwise>
+                    </c:choose>
+                    
+               
+                </c:when>
+                
+                <c:otherwise>
+                    <p>No tiene autorización para ver esta página, debe autenticarse antes.</p>
+                </c:otherwise>
+             </c:choose>    
+        </h:body>
+    
+</html>
+

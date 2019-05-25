@@ -29,6 +29,8 @@ public class InfoSesion implements Serializable {
     private Negocio negocio;
     private Usuario usuario;
     
+     private List<Usuario> empleados;
+    
     /**
      * Creates a new instance of InfoSesion
      */
@@ -44,6 +46,14 @@ public class InfoSesion implements Serializable {
     }
     
     
+    public List<Usuario> getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(List<Usuario> empleados) {
+        this.empleados = empleados;
+    }
+    
     
     public synchronized String invalidarSesion()
     {
@@ -53,6 +63,18 @@ public class InfoSesion implements Serializable {
             FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
         }
         return "login.xhtml";
+    }
+   
+    
+    public boolean isAdmin(){
+        return this.getUsuario().getRol().getNombre().equals("administrador");
+        
+    }
+    
+    
+        public boolean isEmpleado(){
+        return this.getUsuario().getRol().getNombre().equals("empleado");
+        
     }
     
    
