@@ -252,6 +252,15 @@ public class Usuario implements Serializable {
         this.solicitudes = solicitudes;
     }
     
-    
+    public Rol getRol() {
+        return rol;
+    }
+
+    /**
+     * @param perfiles the perfiles to set
+     */
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
     
 }
