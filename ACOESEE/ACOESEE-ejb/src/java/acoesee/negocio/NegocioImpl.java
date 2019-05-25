@@ -25,5 +25,17 @@ public class NegocioImpl implements Negocio {
     private EntityManager em;
 
     
+    @Override
+    public void registrarUsuario(Usuario u) throws ACOESException {
+        Usuario user = em.find(Usuario.class, u.getNick());
+        if (user != null) {
+            // El usuario ya existe
+            throw new CuentaRepetidaException();
+        }
+
+        em.persist(u);
+
+    }
+    
 
 }

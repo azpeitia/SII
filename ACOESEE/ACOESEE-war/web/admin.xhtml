@@ -1,0 +1,42 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="title">Ventana de administrador</ui:define>
+    <ui:define name="content">
+        
+        <p>Hola <h:outputText value="#{emp.nombre}"/>!!</p>
+        <br />
+        <br />
+        <br />
+        
+        <h:button value="Solicitudes pendientes" outcome="solicitudes.xhtml"/>
+        <br />
+        <h:button value="Lista de admins" outcome="admins.xhtml"/>
+        <br />
+        <h:button value="Lista de empleados" outcome="empleados.xhtml"/>
+        <br />
+        <h:button value="Lista de socios" outcome="socios.xhtml"/>
+        <br />
+        <h:button value="Lista de niños/jóvenes" outcome="listarnj.xhtml"/>
+        <br />
+        <h:button value="Lista de apadrinamientos" outcome="listarap.xhtml"/>
+        <br />
+        <h:button value="Lista de mensajes" outcome="msgs.xhtml"/>
+        <br />
+        <h:button value="Registro de mensaje" outcome="altamsg.xhtml"/>
+        <br />
+        <h:button value="Nuevo niño/joven" outcome="altanj.xhtml"/>
+        <br />
+        <h:button value="Nuevo empleado" outcome="altaemp.xhtml"/>
+        <br />
+        <h:button value="Nuevo administrador" outcome="altaadmin.xhtml"/>
+        <br />
+        <h:button value="Datos personales" outcome="mostrardatosadmin.xhtml"/>
+        <br />
+        
+        
+    </ui:define>
+</ui:composition>
+
