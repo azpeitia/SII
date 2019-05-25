@@ -76,7 +76,7 @@ public class Registro {
             negocio.registrarUsuario(usuario);
             registroOK = true;
             
-            usuario = new Usuario();
+
             return "login.xhtml";
             
         } catch (CuentaRepetidaException e) {
