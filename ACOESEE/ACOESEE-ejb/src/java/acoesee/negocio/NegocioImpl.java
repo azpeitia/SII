@@ -99,4 +99,14 @@ public class NegocioImpl implements Negocio {
         em.merge(ap);
     }
 
+    @Override
+    public void modificarSocio(Usuario user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void compruebaLogin(Usuario u) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
