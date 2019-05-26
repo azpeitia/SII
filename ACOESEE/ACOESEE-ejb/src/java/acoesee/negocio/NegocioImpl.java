@@ -6,7 +6,10 @@
 package acoesee.negocio;
 
 
+
 import acoesee.entidades.Rol;
+=======
+import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import java.util.List;
 import java.util.Random;
@@ -41,6 +44,7 @@ public class NegocioImpl implements Negocio {
 
     }
     
+
     
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados = null;
@@ -49,6 +53,27 @@ public class NegocioImpl implements Negocio {
         empleados=q.getResultList();
         
         return empleados;
+    @Override
+    public void eliminarAp(Apadrinamientos ap) {
+        em.remove(em.merge(ap));
+    }
+    
+    @Override
+    public void modificar(Usuario u) {
+        compruebaLogin(u.getUsuario());
+        
+        em.merge(u);
     }
 
+    @Override
+    public void eliminarUsuario(Usuario user) {
+        compruebaLogin(user.getUsuario());
+        em.remove(em.merge(user));
+        em.flush();    }
+
+    @Override
+    public void modificar(Apadrinamientos ap) {
+        
+        em.merge(ap);
+    }
 }
