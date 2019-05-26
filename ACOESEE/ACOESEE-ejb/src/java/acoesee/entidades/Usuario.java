@@ -47,6 +47,8 @@ public class Usuario implements Serializable {
     private String email;
     @Temporal(TemporalType.DATE)
     private Date fecha_alta;
+    boolean editable;
+
     
     /*------ RELACIÓN ----*/
     @OneToMany (mappedBy="usuario")
@@ -62,7 +64,13 @@ public class Usuario implements Serializable {
         
     }
 
-    
+    public boolean isEditable() {
+	return editable;
+    }
+
+    public void setEditable(boolean editable) {
+	this.editable = editable;
+    }
     
     public List<Apadrinamientos> getapadrinamientos(){
         return apadrinamientos;
@@ -252,6 +260,19 @@ public class Usuario implements Serializable {
         this.solicitudes = solicitudes;
     }
     
-    
+    public Rol getRol() {
+        return rol;
+    }
+
+    /**
+     * @param perfiles the perfiles to set
+     */
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
+
+    public void setEditable(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
