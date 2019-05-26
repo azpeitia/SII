@@ -14,6 +14,7 @@ public interface Negocio {
      public void eliminarUsuario(Usuario u);
 
     public void modificar(Usuario user);
+    public void modificarSocio(Usuario user) ;
 
 }
 

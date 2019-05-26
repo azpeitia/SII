@@ -11,6 +11,7 @@ import acoesee.entidades.Usuario;
 import java.util.Random;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.PersistenceContext;
 
 /**
@@ -54,5 +55,7 @@ public class NegocioImpl implements Negocio {
     public void eliminarUsuario(Usuario user) {
         compruebaLogin(user.getUsuario());
         em.remove(em.merge(user));
-        em.flush();    }
+        em.flush();    
+    }
+
 }
