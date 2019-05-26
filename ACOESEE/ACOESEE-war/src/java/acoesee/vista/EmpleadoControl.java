@@ -8,7 +8,9 @@ package acoesee.vista;
 
 
  
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
+import acoesee.negocio.ACOESException;
 import acoesee.negocio.Negocio;
 import java.io.Serializable;
 import java.util.List;
@@ -32,8 +34,9 @@ public class EmpleadoControl implements Serializable {
     public EmpleadoControl() {
     }
     
-    public List<Usuario> getEmpleados(){
-        return negocio.getUsuarios("empleado");
+    public List<Usuario> getEmpleados() throws ACOESException{
+        Rol r = new Rol("empleado");
+        return negocio.getUsuarios(r);
     }
     
    
