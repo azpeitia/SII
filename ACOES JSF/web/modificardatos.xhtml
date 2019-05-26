@@ -10,11 +10,6 @@
     </h:head>
     <h:body>
         <h:form id="myform">
-  
-    <h:messages globalOnly="true" style="color:red;margin:8px;" />
-    
-    <h:outputText value="nif "/>
-    <h:outputText value="#{modificardatos.socio.nif_socio}" /><br/><br/>
     
     <h:messages globalOnly="true" style="color:red;margin:8px;" />
     
@@ -22,7 +17,10 @@
     <h:outputText value="#{modificardatos.socio.nif_socio}" /><br/><br/>
   
     <h:outputText value="Nombre: "/>
-    <h:outputText value="#{modificardatos.socio.nombre}" /><br/><br/>
+    <h:outputText value="#{modificardatos.socio.nombre}" />
+    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.nombre}"/>
+    <h:message for="nombre"/>
+    <br/><br/>
     
     <h:outputText value="Apellido 1: "/>
     <h:outputText value="#{modificardatos.socio.apellido1}" /><br/><br/>

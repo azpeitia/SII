@@ -8,7 +8,6 @@ package acoesee.negocio;
 
 
 import acoesee.entidades.Rol;
-=======
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import java.util.List;
@@ -46,6 +45,7 @@ public class NegocioImpl implements Negocio {
     
 
     
+    @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados = null;
         
@@ -53,6 +53,8 @@ public class NegocioImpl implements Negocio {
         empleados=q.getResultList();
         
         return empleados;
+    }
+        
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
