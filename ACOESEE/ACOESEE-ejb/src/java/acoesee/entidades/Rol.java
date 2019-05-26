@@ -34,6 +34,10 @@ public class Rol implements Serializable {
    /*-------- relacion OneToMany con Apadrinamientos-------*/
     @OneToMany (mappedBy="rol")
     private List<Usuario> usuarios;
+
+    public Rol(String empleado) {
+        setNombre(empleado);
+    }
     
     
     public List<Usuario> getUsuarios(){

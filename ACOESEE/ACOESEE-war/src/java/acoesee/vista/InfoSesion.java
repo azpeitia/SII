@@ -29,8 +29,6 @@ public class InfoSesion implements Serializable {
     private Negocio negocio;
     private Usuario usuario;
     
-     private List<Usuario> empleados;
-    
     /**
      * Creates a new instance of InfoSesion
      */
@@ -43,15 +41,6 @@ public class InfoSesion implements Serializable {
 
     public synchronized Usuario getUsuario() {
         return usuario;
-    }
-    
-    
-    public List<Usuario> getEmpleados() {
-        return empleados;
-    }
-
-    public void setEmpleados(List<Usuario> empleados) {
-        this.empleados = empleados;
     }
     
     
