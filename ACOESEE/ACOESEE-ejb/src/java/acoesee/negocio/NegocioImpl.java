@@ -6,12 +6,18 @@
 package acoesee.negocio;
 
 
+
+import acoesee.entidades.Rol;
+=======
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
+import java.util.List;
 import java.util.Random;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 /**
  *
@@ -38,6 +44,15 @@ public class NegocioImpl implements Negocio {
 
     }
     
+
+    
+    public List<Usuario> getUsuarios(Rol r)throws ACOESException{
+        List<Usuario> empleados = null;
+        
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
+        empleados=q.getResultList();
+        
+        return empleados;
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
