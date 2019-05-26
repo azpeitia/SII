@@ -55,4 +55,10 @@ public class NegocioImpl implements Negocio {
         compruebaLogin(user.getUsuario());
         em.remove(em.merge(user));
         em.flush();    }
+
+    @Override
+    public void modificar(Apadrinamientos ap) {
+        
+        em.merge(ap);
+    }
 }

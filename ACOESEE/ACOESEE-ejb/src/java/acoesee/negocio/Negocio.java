@@ -15,5 +15,7 @@ public interface Negocio {
 
     public void modificar(Usuario user);
 
+    public void modificar(Apadrinamientos ap);
+
 }
 

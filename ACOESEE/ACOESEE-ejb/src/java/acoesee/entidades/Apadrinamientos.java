@@ -33,6 +33,8 @@ public class Apadrinamientos implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date fecha_inicio;
     private String status;
+    boolean editable;
+
     /*----REALACIONES---*/
    
     @ManyToOne
@@ -47,6 +49,13 @@ public class Apadrinamientos implements Serializable {
     private List<Mensaje> msgs;
     
 
+    public boolean isEditable() {
+	return editable;
+    }
+
+    public void setEditable(boolean editable) {
+	this.editable = editable;
+    }
     
     public List<Historial_apadrinamientos> getApadhist(){
         return h_apadrinamientos;
