@@ -79,13 +79,7 @@
                         
                         <br></br>
                         
-                        <h:outputText value="Repita contraseña:"/>
-                        <h:inputSecret id="repass" value="#{SocioControl.repass}" required="true"/>
-                        <h:message for="repass"/>
-                        
-                        <br></br>
-                        
-                        <h:commandButton value="Crear usuario" action="#{SocioControl.}"/>
+                        <h:commandButton value="Crear usuario" action="#{SocioControl.modificarSocio()}"/>
                         <b></b>
                         <h:button outcome ="socio.xhtml" value="Crear usuario" />
             
