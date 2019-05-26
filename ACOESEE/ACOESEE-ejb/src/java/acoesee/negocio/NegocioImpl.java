@@ -58,6 +58,18 @@ public class NegocioImpl implements Negocio {
     }
     
     
+
+    
+    @Override
+    public List<Usuario> getUsuarios(Rol r)throws ACOESException{
+        List<Usuario> empleados = null;
+        
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
+        empleados=q.getResultList();
+        
+        return empleados;
+    }
+        
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
@@ -85,6 +97,16 @@ public class NegocioImpl implements Negocio {
     public void modificar(Apadrinamientos ap) {
 
         em.merge(ap);
+    }
+
+    @Override
+    public void modificarSocio(Usuario user) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void compruebaLogin(Usuario u) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
