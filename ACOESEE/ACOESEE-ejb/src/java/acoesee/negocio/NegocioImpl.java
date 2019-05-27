@@ -108,5 +108,13 @@ public class NegocioImpl implements Negocio {
     public void compruebaLogin(Usuario u) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    @Override
+    public Usuario refrescarUsuario(Usuario u) throws ACOESException{
+        Usuario user = em.find(Usuario.class, u.getDni());
+        if(user == null) throw new CuentaInexistenteException();
+        if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
+        return user;
+    }
+    
 }

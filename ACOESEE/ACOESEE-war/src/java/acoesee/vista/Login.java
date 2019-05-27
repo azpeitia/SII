@@ -6,17 +6,13 @@
 package acoesee.vista;
 
 import acoesee.entidades.Usuario;
-import acoesee.negocio.ACOESException;
-import acoesee.negocio.ContraseniaInvalidaException;
-import acoesee.negocio.CuentaInexistenteException;
-import acoesee.negocio.Negocio;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
-
+import acoesee.negocio.*;
 /**
  *
  * @author francis
@@ -48,6 +44,31 @@ public class Login {
         this.usuario = usuario;
     }
 
-    
+    public String entrar(){
+        try{
+            negocio.compruebaLogin(usuario);
+            sesion.setUsuario(negocio.refrescarUsuario(usuario));
+            if(usuario.getRol().getNombre() == "Socio"){
+                return "socio.xhtml";
+            }else if (usuario.getRol().getNombre()=="Administrador"){
+                return "admin.xhtml";
+            }else{
+                return "empleado.xhtml";
+            }
+        }catch (CuentaInexistenteException e) {
+            FacesMessage fm = new FacesMessage("La cuenta no existe");
+            FacesContext.getCurrentInstance().addMessage("login:user", fm);
+        } catch (ContraseniaInvalidaException e) {
+            FacesMessage fm = new FacesMessage("La contraseña no es correcta");
+            FacesContext.getCurrentInstance().addMessage("login:pass", fm);
+        } catch (CuentaInactivaException e) {
+            FacesMessage fm = new FacesMessage("La cuenta existe pero no está activa");
+            FacesContext.getCurrentInstance().addMessage("login:user", fm);
+        } catch (ACOESException e) {
+            FacesMessage fm = new FacesMessage("Error: " + e);
+            FacesContext.getCurrentInstance().addMessage(null, fm);
+        }
+        return null;
+    }
 
 }
