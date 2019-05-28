@@ -16,12 +16,16 @@ import acoesee.negocio.*;
  *
  * @author dosgr
  */
-@Named(value = "listaradmins")
+@Named(value = "SocioControl")
 @RequestScoped
 public class SocioControl {
     @Inject
     private Negocio negocio;
     private Usuario usuario;
+    
+    public SocioControl(){
+        usuario = new Usuario() ;
+    }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
