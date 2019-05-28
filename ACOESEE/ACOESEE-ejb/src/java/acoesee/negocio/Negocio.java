@@ -21,4 +21,6 @@ public interface Negocio {
      public void modificar(Apadrinamientos ap);
      public void compruebaLogin(Usuario u);
      public void modificarSocio(Usuario user) ;
+     public Apadrinamientos getapadrinamiento(Long dni, Long idnj);
+     public void insertMensaje(Apadrinamientos ap);
 }

@@ -46,29 +46,17 @@ public class NegocioImpl implements Negocio {
 
 
     
-
-    public List<Usuario> getUsuarios(Rol r)throws ACOESException{
-        List<Usuario> empleados = null;
-
-        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
-        empleados=q.getResultList();
-
-        return empleados;
-        
-    }
-    
-    
-
-    
     @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
-        List<Usuario> empleados = null;
-        
+        List<Usuario> empleados ;
+
         Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
         empleados=q.getResultList();
-        
+
         return empleados;
+        
     }
+
         
     @Override
     public void eliminarAp(Apadrinamientos ap) {
@@ -78,7 +66,7 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public void modificar(Usuario u) {
-        compruebaLogin(u.getUsuario());
+        compruebaLogin(u);
         EntityTransaction Ent = em.getTransaction() ;
         Ent.begin();
         em.merge(u);
@@ -87,7 +75,7 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public void eliminarUsuario(Usuario user) {
-        compruebaLogin(user.getUsuario());
+        compruebaLogin(user);
         em.remove(em.merge(user));
         em.flush();    
     
@@ -107,6 +95,27 @@ public class NegocioImpl implements Negocio {
     @Override
     public void compruebaLogin(Usuario u) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public Apadrinamientos getapadrinamiento(Long dni, Long idnj){
+        /*  Este  metodo es neccesario para dar de alta un mensaje pero no lo tuvimos encuentra, 
+            si alguien lo quiere utilizar devuelve el apadrinamiento entre un joven y un socio concretos*/
+        Apadrinamientos ap ;
+        Query q = em.createQuery("Select e from apadrinamientos e  "
+                + "where e.usuario = (select e from usuario e where e.dni = "+dni+") "
+                        + "and e.joven = (select e from jovenes e where e.id = "+idnj+") ");
+        
+        ap = (Apadrinamientos) q.getResultList().get(0) ;
+        return ap ;
+    }
+    
+    @Override
+    public void insertMensaje(Apadrinamientos ap){
+        EntityTransaction Ent = em.getTransaction() ;
+        Ent.begin();
+        em.persist(ap);
+        Ent.begin();
     }
 
 }
