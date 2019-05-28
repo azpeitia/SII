@@ -40,7 +40,7 @@ public class EmpleadoControl implements Serializable {
         return negocio.getUsuarios(r);
     }
     
-    public void eliminarEmpleado(Usuario u){
+    public void eliminarEmpleado(Usuario u) throws ACOESException{
         negocio.eliminarUsuario(u);
     }
    

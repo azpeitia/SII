@@ -6,7 +6,7 @@
 package acoesee.vista;
 
 import acoesee.entidades.Apadrinamientos;
-import acoesee.negocio.Negocio;
+import acoesee.negocio.*;
 import acoesee.entidades.Mensaje;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -52,7 +52,7 @@ public class MensajeControl {
         return negocio;
     }
     
-    public void altaMensaje(){
+    public void altaMensaje() throws ACOESException{
         Apadrinamientos ap ;
         ap = negocio.getapadrinamiento(dni, idjoven);
         negocio.insertMensaje(ap) ;

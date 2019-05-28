@@ -123,4 +123,10 @@ public class NegocioImpl implements Negocio {
         return user;
     }
     
+    @Override
+    public void insertMensaje(Apadrinamientos ap) throws ACOESException{}
+    
+    @Override
+    public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException{return null;}
+    
 }
