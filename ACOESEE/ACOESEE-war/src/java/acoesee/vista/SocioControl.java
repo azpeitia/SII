@@ -6,6 +6,7 @@
 package acoesee.vista;
 
 import acoesee.entidades.Usuario;
+import acoesee.negocio.ACOESException;
 import acoesee.negocio.Negocio;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -35,7 +36,12 @@ public class SocioControl {
     }
     
     public String modificarSocio(){
-        negocio.modificarSocio(usuario) ;
+        try{
+            negocio.modificarSocio(usuario) ;      
+        }catch(ACOESException e){
+            System.out.println("Error") ;
+        }
+
         return "socio.xhtml" ;
     }
 }
