@@ -44,7 +44,7 @@ public class ListarAdmins {
  
 	}
 	
-	public String saveAction() {
+	public String saveAction() throws ACOESException {
 	    
 		//get all existing value but set "editable" to false 
 		for (Usuario user : personList){
@@ -57,7 +57,7 @@ public class ListarAdmins {
 		
 	}
         
-        public String deleteAction(Usuario user) {
+        public String deleteAction(Usuario user) throws ACOESException {
 		personList.remove(user);
                 negocio.eliminarUsuario(user);
 

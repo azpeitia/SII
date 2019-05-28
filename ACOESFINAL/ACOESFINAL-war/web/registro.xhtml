@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Registro de Socio</title>
+    </h:head>
+    <h:body>
+                <h:form id="registro">
+                    <h:panelGrid columns="3">
+                        <h:outputText value="DNI"/>
+                        <h:inputText id="nif" value="#{registro.usuario.dni}"/>
+                        <h:message for="dni"/>
+                        
+                        <h:outputText value="Nombre"/>
+                        <h:inputText id="nombre" value="#{registro.usuario.nombre}"/>
+                        <h:message for="nombre"/>
+                        
+                        <h:outputText value="Primer apellido"/>
+                        <h:inputText id="apellido1" value="#{registro.usuario.apellido1}"/>
+                        <h:message for="apellido1"/>
+                        
+                        <h:outputText value="Segundo apellido"/>
+                        <h:inputText id="apellido2" value="#{registro.usuario.apellido2}"/>
+                        <h:message for="apellido2"/>
+                        
+                        <h:outputText value="Nick"/>
+                        <h:inputText id="nick" value="#{registro.usuario.nick}"/>
+                        <h:message for="Nick"/>
+                        
+                        <h:outputText value="E-mail:"/>
+                        <h:inputText id="email" value="#{registro.usuario.email}" required="true"
+                                     validatorMessage="Compruebe que ha introducido un e-mail correcto">
+                            <f:validateRegex pattern=".+@.+"/>
+                        </h:inputText>
+                        <h:message for="email"/>
+                        
+                         <h:outputText value="Dirección"/>
+                        <h:inputText id="direccion" value="#{registro.usuario.direccion}"/>
+                        <h:message for="direccion"/>
+                        
+                        <h:outputText value="Telefono"/>
+                        <h:inputText id="telefono" value="#{registro.usuario.telefono}"/>
+                        <h:message for="telefono"/>
+                        
+                        <h:outputText value="Fecha de Nacimiento"/>
+                        <h:inputText value="#{registro.usuario.fecha_nacimiento}">
+                            <f:convertDateTime pattern="MM/dd/yy"/>
+                        </h:inputText>
+                        <h:message for="fecha_nacimiento"/>
+                        
+                        <h:outputText value="Fecha de alta"/>
+                        <h:inputText value="#{registro.usuario.fecha_alta}">
+                            <f:convertDateTime pattern="MM/dd/yy"/>
+                        </h:inputText>
+                        <h:message for="fecha_alta"/>
+                        
+                        <h:outputText value="Contraseña:"/>
+                        <h:inputSecret id="pass" value="#{registro.usuario.password}" required="true"/>
+                        <h:message for="password"/>
+                        
+                        <h:outputText value="Repita contraseña:"/>
+                        <h:inputSecret id="repass" value="#{registro.repass}" required="true"/>
+                        <h:message for="repass"/>
+                        
+                        <h:commandButton value="Crear usuario" action="#{registro.registrarUsuario()}"/>
+                        <h:link outcome="login.xhtml">Volver a la página de login</h:link>
+                    </h:panelGrid>
+                    <h:messages/>
+                    
+                </h:form>
+
+    </h:body>
+</html>
+
