@@ -6,27 +6,21 @@
 package acoesee.vista;
 
 import acoesee.entidades.Usuario;
-import acoesee.negocio.ACOESException;
 import acoesee.negocio.Negocio;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import acoesee.negocio.*;
-
 /**
  *
  * @author dosgr
  */
-@Named(value = "SocioControl")
+@Named(value = "listaradmins")
 @RequestScoped
 public class SocioControl {
     @Inject
     private Negocio negocio;
     private Usuario usuario;
-
-    public SocioControl(){
-        usuario = new Usuario() ;
-    }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -35,7 +29,7 @@ public class SocioControl {
     public Usuario getUsuario() {
         return usuario;
     }
-
+    
     public String modificarSocio() throws ACOESException{
         negocio.modificarSocio(usuario) ;
         return "socio.xhtml" ;

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style2.css"  />
+    </h:head>
+    <h:body>
+    	
+    	<h1>Administradores</h1>
+    	<h:form>
+    		<h:dataTable value="#{listaradmins.orderList}" var="l"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    		>
+                            
+                        <h:column>
+                                <f:facet name="header">No</f:facet>#{listaradmins.personList.rowIndex + 1}
+                        </h:column>
+    			
+    			<h:column>
+    			
+    				<f:facet name="header">Nombre</f:facet>
+    				
+    				<h:inputText value="#{l.nombre}" size="20" rendered="#{l.editable}" />
+    				
+    				<h:outputText value="#{l.nombre}" rendered="#{not l.editable}" />
+    				
+    			</h:column>
+    			
+    			<h:column>
+    				
+    				<f:facet name="header">Apellido1</f:facet>
+    				
+    				<h:inputText value="#{l.apellido1}" size="10" rendered="#{l.editable}" />
+    				
+    				<h:outputText value="#{l.apellido1}" rendered="#{not l.editable}" />
+    				
+    			</h:column>
+    			
+    			<h:column>
+    				
+    				<f:facet name="header">Apellido2</f:facet>
+    				
+    				<h:inputText value="#{l.apellido2}" size="5" rendered="#{l.editable}" />
+    				
+    				<h:outputText value="#{l.apellido2}" rendered="#{not l.editable}" />
+    				
+    			</h:column>
+    		
+    			<h:column>
+    				
+    				<f:facet name="header"></f:facet>
+    				
+    				<h:commandLink value="Editar" action="#{listaradmins.editAction(l)}" rendered="#{not l.editable}" />
+    				
+    			</h:column>
+                    
+                        <h:column>
+    				
+                                <f:facet name="header"></f:facet>
+    				
+                                <h:commandLink value="Borrar" action="#{listaradmins.deleteAction(l)}" />
+    				
+                        </h:column>
+
+    		</h:dataTable>
+    		
+    		<h:commandButton value="Guardar cambios" action="#{listaradmins.saveAction}" />
+    		
+    	</h:form>
+    </h:body>
+		
+</html>
