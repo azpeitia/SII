@@ -47,6 +47,7 @@ public class NegocioImpl implements Negocio {
 
     
 
+    @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados = null;
 

@@ -8,6 +8,8 @@
         <title>Registro de Socio</title>
     </h:head>
     <h:body>
+        <c:choose>
+            <c:when test="#{empty infoSesion.usuario}">
                 <h:form id="registro">
                     <h:panelGrid columns="3">
                         <h:outputText value="DNI"/>
@@ -71,7 +73,12 @@
                     <h:messages/>
                     
                 </h:form>
-
+            </c:when>
+            <c:otherwise>
+                 <p>Para crear un nuevo registro debe 
+                        <h:commandLink action="#{infoSesion.invalidarSesion()}">salir</h:commandLink> antes de la aplicación.</p>
+            </c:otherwise>
+        </c:choose>
     </h:body>
 </html>
 

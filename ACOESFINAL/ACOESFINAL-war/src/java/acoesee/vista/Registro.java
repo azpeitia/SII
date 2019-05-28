@@ -22,10 +22,10 @@ import javax.inject.Inject;
 public class Registro {
 
     //@Inject
-    @EJB
+    @Inject
     private Negocio negocio;
-
     private Usuario usuario;
+    
     private String repass;
 
     private String cuenta;
