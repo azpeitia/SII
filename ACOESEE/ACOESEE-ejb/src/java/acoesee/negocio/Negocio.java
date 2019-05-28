@@ -17,10 +17,12 @@ public interface Negocio {
      public List<Usuario> getUsuarios(Rol r)throws ACOESException;
      public void eliminarAp(Apadrinamientos ap);
      public void eliminarUsuario(Usuario u);
-     public void modificar(Usuario user);
-     public void modificar(Apadrinamientos ap);
-     public void compruebaLogin(Usuario u);
-     public void modificarSocio(Usuario user) ;
-     public Apadrinamientos getapadrinamiento(Long dni, Long idnj);
-     public void insertMensaje(Apadrinamientos ap);
+     public void modificar(Usuario user) throws ACOESException;
+     public void modificar(Apadrinamientos ap) throws ACOESException;
+     public void compruebaLogin(Usuario u) throws ACOESException;
+     public void modificarSocio(Usuario user) throws ACOESException;
+     public Usuario refrescarUsuario(Usuario u) throws ACOESException;
+     public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException;
+     public void insertMensaje(Apadrinamientos ap) throws ACOESException;
+
 }

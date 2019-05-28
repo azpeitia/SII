@@ -45,7 +45,7 @@ public class NegocioImpl implements Negocio {
     }
 
 
-    
+
     @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados ;
@@ -54,15 +54,15 @@ public class NegocioImpl implements Negocio {
         empleados=q.getResultList();
 
         return empleados;
-        
+
     }
 
-        
+
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
     }
-    
+
 
     @Override
     public void modificar(Usuario u) {
@@ -77,8 +77,8 @@ public class NegocioImpl implements Negocio {
     public void eliminarUsuario(Usuario user) {
         compruebaLogin(user);
         em.remove(em.merge(user));
-        em.flush();    
-    
+        em.flush();
+
     }
 
     @Override
@@ -96,20 +96,21 @@ public class NegocioImpl implements Negocio {
     public void compruebaLogin(Usuario u) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
+
     public Apadrinamientos getapadrinamiento(Long dni, Long idnj){
-        /*  Este  metodo es neccesario para dar de alta un mensaje pero no lo tuvimos encuentra, 
+        /*  Este  metodo es neccesario para dar de alta un mensaje pero no lo tuvimos encuentra,
             si alguien lo quiere utilizar devuelve el apadrinamiento entre un joven y un socio concretos*/
         Apadrinamientos ap ;
         Query q = em.createQuery("Select e from apadrinamientos e  "
                 + "where e.usuario = (select e from usuario e where e.dni = "+dni+") "
                         + "and e.joven = (select e from jovenes e where e.id = "+idnj+") ");
-        
+
         ap = (Apadrinamientos) q.getResultList().get(0) ;
         return ap ;
     }
-    
+
     @Override
     public void insertMensaje(Apadrinamientos ap){
         EntityTransaction Ent = em.getTransaction() ;
@@ -117,5 +118,13 @@ public class NegocioImpl implements Negocio {
         em.persist(ap);
         Ent.begin();
     }
+    @Override
+    public Usuario refrescarUsuario(Usuario u) throws ACOESException{
+        Usuario user = em.find(Usuario.class, u.getDni());
+        if(user == null) throw new CuentaInexistenteException();
+        if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
+        return user;
+    }
+
 
 }
