@@ -56,13 +56,13 @@ public class InfoSesion implements Serializable {
    
     
     public boolean isAdmin(){
-        return this.getUsuario().getRol().getNombre().equals("administrador");
+        return this.getUsuario().getRol().getNombre().equals("Administrador");
         
     }
     
     
         public boolean isEmpleado(){
-        return this.getUsuario().getRol().getNombre().equals("empleado");
+        return this.getUsuario().getRol().getNombre().equals("Empleado");
         
     }
     

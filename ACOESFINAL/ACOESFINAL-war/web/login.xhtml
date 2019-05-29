@@ -7,24 +7,26 @@
         <title>Login de usuario</title>
     </h:head>
     <h:body>
-
+        <img src ="https://pbs.twimg.com/profile_images/1438272270/Imagen_4_400x400.png"></img>
         <h:form id="login">
 
                     <h:panelGrid columns="3">
                         <h:outputText value="Nombre de usuario:"/>
-                        <h:inputText id="user" required="true" value="#{login.usuario.cuenta}"/>
+                        <h:inputText id="user" required="true" value="#{login.usuario.dni}"/>
                         <h:message for="user"/>
 
                         <h:outputText value="Contraseña:"/>
-                        <h:inputSecret id="pass" required="true" value="#{login.usuario.contrasenia}"/>
+                        <h:inputSecret id="pass" required="true" value="#{login.usuario.password}"/>
                         <h:message for="pass"/>
-
-                        <h:commandButton value="Entrar" action="#{login.entrar()}"/>
+                        <h:commandButton value="Entrar como socio" action="#{login.entrarComoSocio()}"/>
+                        <h:commandButton value="Entrar como empleado" action="#{login.entrarComoEmpleado()}"/>
+                        <h:commandButton value="Entrar como administrador" action="#{login.entrarComoAdministrador()}"/>
+                        
 
                     </h:panelGrid>
 
                     <div>
-                        <p>Si no tiene cuenta puede crear una en la <h:link outcome="registroUsuario.xhtml">página de registro</h:link></p>
+                        <p><h:link outcome="registro.xhtml">Registrate como socio</h:link></p>
                     </div>
 
 
