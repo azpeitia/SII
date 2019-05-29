@@ -5,6 +5,7 @@
  */
 package acoesee.vista;
 
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -43,8 +44,65 @@ public class Login {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
-    public String entrar(){
+    
+    public String entrarComoSocio(){
+    try{
+            negocio.compruebaLogin(usuario);
+            sesion.setUsuario(negocio.refrescarUsuario(usuario));
+            return "socio.xhtml";
+            
+        }catch (CuentaInexistenteException e) {
+            FacesMessage fm = new FacesMessage("La cuenta no existe");
+            FacesContext.getCurrentInstance().addMessage("login:user", fm);
+        } catch (ContraseniaInvalidaException e) {
+            FacesMessage fm = new FacesMessage("La contraseña no es correcta");
+            FacesContext.getCurrentInstance().addMessage("login:pass", fm);
+        }catch (ACOESException e) {
+            FacesMessage fm = new FacesMessage("Error: " + e);
+            FacesContext.getCurrentInstance().addMessage(null, fm);
+        }
+        return null;
+    }
+    
+    public String entrarComoEmpleado(){
+    try{
+            negocio.compruebaLogin(usuario);
+            sesion.setUsuario(negocio.refrescarUsuario(usuario));
+            return "empleado.xhtml";
+            
+        }catch (CuentaInexistenteException e) {
+            FacesMessage fm = new FacesMessage("La cuenta no existe");
+            FacesContext.getCurrentInstance().addMessage("login:user", fm);
+        } catch (ContraseniaInvalidaException e) {
+            FacesMessage fm = new FacesMessage("La contraseña no es correcta");
+            FacesContext.getCurrentInstance().addMessage("login:pass", fm);
+        }catch (ACOESException e) {
+            FacesMessage fm = new FacesMessage("Error: " + e);
+            FacesContext.getCurrentInstance().addMessage(null, fm);
+        }
+        return null;
+    }
+    
+    public String entrarComoAdministrador(){
+    try{
+            negocio.compruebaLogin(usuario);
+            sesion.setUsuario(negocio.refrescarUsuario(usuario));
+            return "admin.xhtml";
+            
+        }catch (CuentaInexistenteException e) {
+            FacesMessage fm = new FacesMessage("La cuenta no existe");
+            FacesContext.getCurrentInstance().addMessage("login:user", fm);
+        } catch (ContraseniaInvalidaException e) {
+            FacesMessage fm = new FacesMessage("La contraseña no es correcta");
+            FacesContext.getCurrentInstance().addMessage("login:pass", fm);
+        }catch (ACOESException e) {
+            FacesMessage fm = new FacesMessage("Error: " + e);
+            FacesContext.getCurrentInstance().addMessage(null, fm);
+        }
+        return null;
+    }
+    
+    /*public String entrar(){
         try{
             negocio.compruebaLogin(usuario);
             sesion.setUsuario(negocio.refrescarUsuario(usuario));
@@ -66,6 +124,6 @@ public class Login {
             FacesContext.getCurrentInstance().addMessage(null, fm);
         }
         return null;
-    }
+    }*/
 
 }
