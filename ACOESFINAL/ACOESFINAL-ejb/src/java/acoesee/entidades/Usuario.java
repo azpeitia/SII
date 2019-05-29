@@ -29,7 +29,6 @@ public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long dni;
     @Column(nullable=false)
     private String password;
@@ -49,15 +48,7 @@ public class Usuario implements Serializable {
     private Date fecha_alta;
     boolean editable;
 
-    private String cadenaValidacion;
     
-    public String getCadenaValidacion(){
-        return cadenaValidacion;
-    }
-    
-    public void setCadenaValidacion(String cadenaValidacion){
-        this.cadenaValidacion = cadenaValidacion;
-    }
     
     /*------ RELACIÓN ----*/
     @OneToMany (mappedBy="usuario")
