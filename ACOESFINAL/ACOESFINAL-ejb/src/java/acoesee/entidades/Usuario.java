@@ -49,15 +49,7 @@ public class Usuario implements Serializable {
     private Date fecha_alta;
     boolean editable;
 
-    private String cadenaValidacion;
     
-    public String getCadenaValidacion(){
-        return cadenaValidacion;
-    }
-    
-    public void setCadenaValidacion(String cadenaValidacion){
-        this.cadenaValidacion = cadenaValidacion;
-    }
     
     /*------ RELACIÓN ----*/
     @OneToMany (mappedBy="usuario")
