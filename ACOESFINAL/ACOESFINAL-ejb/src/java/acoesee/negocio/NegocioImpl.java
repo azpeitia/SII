@@ -10,6 +10,7 @@ package acoesee.negocio;
 import acoesee.entidades.Rol;
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
+import acoesee.entidades.Jovenes;
 import java.util.List;
 import java.util.Random;
 import javax.ejb.Stateless;
@@ -122,6 +123,12 @@ public class NegocioImpl implements Negocio {
         if(user == null) throw new CuentaInexistenteException();
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         return user;
+    }
+    
+    @Override
+    public void insertarNj(Jovenes nj){
+        
+        em.persist(nj);
     }
     
 }

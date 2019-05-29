@@ -4,7 +4,7 @@ package acoesee.negocio;
 
 
 import acoesee.entidades.Rol;
-
+import acoesee.entidades.Jovenes;
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import java.util.List;
@@ -22,4 +22,5 @@ public interface Negocio {
      public void compruebaLogin(Usuario u) throws ACOESException;
      public void modificarSocio(Usuario user) throws ACOESException;
      public Usuario refrescarUsuario(Usuario u) throws ACOESException;
+     public void insertarNj(Jovenes j);
 }
