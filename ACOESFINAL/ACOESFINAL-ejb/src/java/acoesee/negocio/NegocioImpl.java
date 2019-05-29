@@ -108,17 +108,17 @@ public class NegocioImpl implements Negocio {
     @Override
     public void compruebaLogin(Usuario u) throws ACOESException {
          //To change body of generated methods, choose Tools | Templates.
-         Usuario user = em.find(Usuario.class, u.getDni());
+         Usuario user = em.find(Usuario.class, u.getNick());
         if (user == null) 
             throw new CuentaInexistenteException();
+        if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         
-        if(!user.getPassword().equals(u.getPassword()))
-            throw new ContraseniaInvalidaException();
+
     }
     
     @Override
     public Usuario refrescarUsuario(Usuario u) throws ACOESException{
-        Usuario user = em.find(Usuario.class, u.getDni());
+        Usuario user = em.find(Usuario.class, u.getNick());
         if(user == null) throw new CuentaInexistenteException();
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         return user;

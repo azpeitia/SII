@@ -8,7 +8,6 @@ package acoesee.vista;
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
-import acoesee.negocio.ContraseniaInvalidaException;
 import acoesee.negocio.CuentaInexistenteException;
 import acoesee.negocio.Negocio;
 import java.util.ArrayList;

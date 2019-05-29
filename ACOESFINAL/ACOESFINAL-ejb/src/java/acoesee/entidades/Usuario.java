@@ -28,13 +28,13 @@ import javax.persistence.TemporalType;
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    private String nick;
+    @Column(unique=true)
     private Long dni;
     @Column(nullable=false)
     private String password;
-    @Column(nullable=false)
-    private String nick;
     @Column(nullable=false)
     private String nombre;
     @Column(nullable=false)

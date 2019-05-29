@@ -12,21 +12,19 @@
 
                     <h:panelGrid columns="3">
                         <h:outputText value="Nombre de usuario:"/>
-                        <h:inputText id="user" required="true" value="#{login.usuario.dni}"/>
+                        <h:inputText id="user" required="true" value="#{login.usuario.nick}"/>
                         <h:message for="user"/>
 
                         <h:outputText value="Contraseña:"/>
                         <h:inputSecret id="pass" required="true" value="#{login.usuario.password}"/>
                         <h:message for="pass"/>
-                        <h:commandButton value="Entrar como socio" action="#{login.entrarComoSocio()}"/>
-                        <h:commandButton value="Entrar como empleado" action="#{login.entrarComoEmpleado()}"/>
-                        <h:commandButton value="Entrar como administrador" action="#{login.entrarComoAdministrador()}"/>
+                        <h:commandButton value="Entrar" action="#{login.entrar()}"/>
                         
 
                     </h:panelGrid>
 
                     <div>
-                        <p><h:link outcome="registro.xhtml">Registrate como socio</h:link></p>
+                        <p><h:link outcome="registro.xhtml">Regístrate como socio</h:link></p>
                     </div>
 
 
