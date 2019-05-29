@@ -4,7 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      >
+          
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
     	<h:outputStylesheet library="css" name="table-style.css"  />
     </h:head>
@@ -44,7 +45,15 @@
 
     	</h:dataTable>
     	</h:form>
-	
+            <c:choose>
+                <c:when test="#{infoSesion.admin||infoSesion.empleado}">
+                        <h:form>
+                            <h:commandButton value="Modificar" action="#{listaraps.editAction(l.id_apadrinamiento)}" />
+                            <h:commandButton value="Eliminar" action="#{listaraps.deleteAction(l.id_apadrinamiento)}" />
+                        </h:form>
+                    </c:when>
+            </c:choose>
+        
     </h:body>
 
 </html>
