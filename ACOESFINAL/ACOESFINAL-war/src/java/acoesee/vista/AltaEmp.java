@@ -11,6 +11,7 @@ import acoesee.negocio.Negocio;
 import java.io.IOException;
 import java.util.Date;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
 
 /**
  *
@@ -18,6 +19,7 @@ import javax.faces.context.FacesContext;
  */
 public class AltaEmp {
     
+    @Inject
     private Negocio negocio;
 
     private Usuario emp;
