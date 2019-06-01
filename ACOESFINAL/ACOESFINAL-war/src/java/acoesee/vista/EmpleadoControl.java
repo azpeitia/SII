@@ -33,11 +33,13 @@ public class EmpleadoControl {
     
     private Usuario usuario;
     
-   
+   public EmpleadoControl(){
+       usuario=new Usuario();
+   }
     
     public List<Usuario> getEmpleados() throws ACOESException{
-        Rol r = new Rol("Empleado");
-        return negocio.getUsuarios(r);
+        
+        return negocio.getUsuarios2("Empleado");
     }
     
     public void setUsuario(Usuario user) {

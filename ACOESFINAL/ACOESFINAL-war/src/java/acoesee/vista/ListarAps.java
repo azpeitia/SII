@@ -83,9 +83,21 @@ public List<Apadrinamientos> getPersonList() throws ACOESException {
                 return "modificarapa.xhtml";
 	}
 
-        public String edit(){
+        public String edit() throws ACOESException{
 
-            //apadrinamiento.
+            negocio.modificar(apadrinamiento);
+            Usuario user=sesion.getUsuario();
+        
+            switch (user.getRol().getNombre()) {
+                case "Administrador":
+                    return "admin.xhtml";
+                
+                case "Empleado":
+                    return "empleado.xhtml";
+                
+                case "Socio":
+                    return "socio.xhtml";
+            }
             return null;
         }
 
