@@ -89,10 +89,10 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public void eliminarUsuario(Usuario user) throws ACOESException {
-        compruebaLogin(user);
+        //compruebaLogin(user);
+        Usuario u=em.find(Usuario.class, user.getNick());
         em.remove(em.merge(user));
-        em.flush();    
-    
+           
     }
 
     @Override
