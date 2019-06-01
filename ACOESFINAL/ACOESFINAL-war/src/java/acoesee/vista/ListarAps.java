@@ -30,8 +30,6 @@ import javax.inject.Inject;
 @RequestScoped
 public class ListarAps {
 
-    private static final long serialVersionUID = 1L;
-
     private static List<Apadrinamientos> personList = new ArrayList<>();
 
 
@@ -42,10 +40,13 @@ public class ListarAps {
     @Inject
     private InfoSesion sesion;
     private Apadrinamientos apadrinamiento;
-    public List<Apadrinamientos> getPersonList() throws ACOESException {
-            personList = negocio.getapadrinamientos();
-            return personList;
-    }
+
+public List<Apadrinamientos> getPersonList() throws ACOESException {
+        Rol r = new Rol("ADMIN");
+        personList = negocio.getapadrinamientos();
+        return personList;
+	}
+
 
 	public String saveAction() throws ACOESException {
 
@@ -60,12 +61,12 @@ public class ListarAps {
 
 	}
 
-        public void setApadrinamiento(Apadrinamientos ap) {
-            this.apadrinamiento = ap;
+        public void setApadrinamientos(Apadrinamientos ap) {
+            ap= new Apadrinamientos();
         }
 
-        public Apadrinamientos getApadrinamiento() {
-            return apadrinamiento;
+        public Apadrinamientos getApadrinamientos() {
+            return this.apadrinamiento;
         }
 
 
@@ -81,5 +82,11 @@ public class ListarAps {
 		apadrinamiento=ap;
                 return "modificarapa.xhtml";
 	}
+
+        public String edit(){
+
+            //apadrinamiento.
+            return null;
+        }
 
 }

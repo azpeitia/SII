@@ -44,6 +44,8 @@ public class AdminControl {
     private Usuario usuario;
     
     
+    
+    
     public List<Mensaje> getMensajes() {
         try{
             List<Mensaje> mensajes=negocio.getMensajes();

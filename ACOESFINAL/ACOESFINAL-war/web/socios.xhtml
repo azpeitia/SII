@@ -51,12 +51,12 @@
                             <f:facet name="header">Nick</f:facet>
                             <h:outputText value="#{c.nick}"/>
                         </h:column>
-                        
+                        <h:column>
                         <h:commandButton value="Modificar" action="#{socioControl.modificar(c)}"/>
-                        
-                        
+                        </h:column>
+                        <h:column>
                         <h:commandButton value="Eliminar" action="#{socioControl}"/>
-                        
+                        </h:column>
                     </h:dataTable>
                        
                 </h:form>

@@ -43,7 +43,19 @@ public class SocioControl {
 
     public String modificarSocio() throws ACOESException{
         negocio.modificar(usuario) ;
-        return "socio.xhtml" ;
+        Usuario user=infoSesion.getUsuario();
+
+        switch (user.getRol().getNombre()) {
+            case "Administrador":
+                return "admin.xhtml";
+
+            case "Empleado":
+                return "empleado.xhtml";
+
+            case "Socio":
+                return "socio.xhtml";
+        }
+        return null;
     }
 
 
