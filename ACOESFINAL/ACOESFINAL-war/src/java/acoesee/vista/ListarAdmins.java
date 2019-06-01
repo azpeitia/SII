@@ -5,12 +5,14 @@
  */
 package acoesee.vista;
 
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
 import acoesee.negocio.ContraseniaInvalidaException;
 import acoesee.negocio.CuentaInexistenteException;
 import acoesee.negocio.Negocio;
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -31,18 +33,18 @@ public class ListarAdmins {
     
     private static final long serialVersionUID = 1L;
     
-    private static final ArrayList<Usuario> personList = new ArrayList<>();
+    private static List<Usuario> personList = new ArrayList<>();
 	
-    private static final Usuario[] users = new Usuario[]{};
+    private static Usuario[] users = new Usuario[]{};
     
     @Inject
     private Negocio negocio;
 
                
-    public ArrayList<Usuario> getPersonList() {
- 
-		return personList;
- 
+    public List<Usuario> getPersonList() throws ACOESException {
+        Rol r = new Rol("Administrador");
+        personList = negocio.getUsuarios2(r);
+        return personList;
 	}
 	
 	public String saveAction() throws ACOESException {
