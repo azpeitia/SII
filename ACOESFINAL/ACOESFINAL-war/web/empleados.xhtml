@@ -65,13 +65,13 @@
                             
                              
                             <c:when test="#{infoSesion.admin}">
-                                
-                                 <h:commandButton value="Modificar Empleado" action="#{EmpleadoControl.modificar(e)}"/>
-                                 
+                                                            <h:column>
+                                 <h:commandButton value="Modificar Empleado" action="#{empleadoControl.modificar(e)}"/>
+                                                             </h:column>
                                  <br></br>
-                                
-                                <h:commandButton value="Eliminar Empleado" action="#{EmpleadoControl.eliminarEmpleado(e)}" />
-                                
+                                                            <h:column>
+                                <h:commandButton value="Eliminar Empleado" action="#{empleadoControl.eliminarEmpleado(e)}" />
+                                                            </h:column>
                             </c:when>>
                              
                          </h:dataTable>
