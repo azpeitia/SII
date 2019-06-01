@@ -127,7 +127,6 @@ public class NegocioImpl implements Negocio {
     
     @Override
     public void insertarNj(Jovenes nj){
-        
         em.persist(nj);
     }
     

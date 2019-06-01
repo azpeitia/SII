@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import acoesee.negocio.*;
 import java.util.List;
+import javax.ejb.EJB;
 
 /**
  *
@@ -39,7 +40,7 @@ public class NjControl {
     public String insertarNj(){
         negocio.insertarNj(nj);
         sesion.refrescarUsuario();
-        return "listarnjs.xhtml";
+        return "admin.xhtml";
         
     }
     
