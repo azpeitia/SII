@@ -74,17 +74,12 @@
                         </h:inputText>
                         <h:message for="fecha_alta"/>
                         
-                        <br></br>
-                        
-                        <h:outputText value="Contraseña:"/>
-                        <h:inputSecret id="pass" value="#{socioControl.getUsuario().password}" required="true"/>
-                        <h:message for="password"/>
                         
                         <br></br>
                         
-                        <h:commandButton value="Crear usuario" action="#{socioControl.modificarSocio()}"/>
+                        <h:commandButton value="Modificar" action="#{socioControl.modificarSocio()}"/>
                         <b></b>
-                        <h:button outcome ="socio.xhtml" value="Crear usuario" /> 
+                        <h:button outcome ="socio.xhtml" value="Cancelar" /> 
             
         </h:form>
         

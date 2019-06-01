@@ -29,6 +29,9 @@ public class SocioControl {
 
     private Usuario usuario;
 
+    public  SocioControl(){
+        usuario = new Usuario();
+    }
 
     public void setUsuario(Usuario usuario) {
         usuario = new Usuario();
