@@ -13,15 +13,13 @@
     	
     	<h1>Administradores</h1>
     	<h:form id = "listadmins">
-    		<h:dataTable value="#{listadmins.orderList}" var="l"
+            <h:dataTable value="#{listadmins.personList}" var="l"
     			styleClass="order-table"
     			headerClass="order-table-header"
     			rowClasses="order-table-odd-row,order-table-even-row"
     		>
                             
-                        <h:column>
-                                <f:facet name="header">No</f:facet>#{listadmins.personList.rowIndex + 1}
-                        </h:column>
+                       
     			
     			<h:column>
     			

@@ -7,7 +7,7 @@
 package acoesee.vista;
 
 
- 
+
 import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
@@ -27,19 +27,21 @@ public class EmpleadoControl {
 
     @Inject
     private Negocio negocio;
-    
+
     @Inject
     private InfoSesion sesion;
-    
+
     private Usuario usuario;
-    
-   
-    
+
+   public EmpleadoControl(){
+       usuario=new Usuario();
+   }
+
     public List<Usuario> getEmpleados() throws ACOESException{
-        Rol r = new Rol("Empleado");
-        return negocio.getUsuarios(r);
+
+        return negocio.getUsuarios2("Empleado") ;
     }
-    
+
     public void setUsuario(Usuario user) {
         this.usuario = user;
     }
@@ -47,15 +49,15 @@ public class EmpleadoControl {
     public Usuario getUsuario() {
         return usuario;
     }
-    
-    
+
+
     public void eliminarEmpleado(Usuario u) throws ACOESException{
         negocio.eliminarUsuario(u);
     }
-   
+
     public String modificar(Usuario c) {
         usuario = c;
         return "mostrardatosemp.xhtml";
     }
-    
+
 }

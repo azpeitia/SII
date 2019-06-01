@@ -9,41 +9,41 @@
         <title>Dar de alta a un administrador</title>
     </h:head>
     <h:body>
-        <h:form id="myform">
+        <h:form id="AdminControl">
   
     <h:messages globalOnly="true" style="color:red;margin:8px;" />
   
     <h:outputText value="Nombre: "/>
-    <h:inputText label="nombre" value="#{altaemp.emp.nombre}" /><br/><br/>
+    <h:inputText label="nombre" value="#{adminControl.usuario}" /><br/><br/>
     
     <h:outputText value="Apellido 1: "/>
-    <h:inputText label="apellido1" value="#{altaemp.emp.apellido1}" /><br/><br/>
+    <h:inputText label="apellido1" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Apellido 2: "/>
-    <h:inputText label="apellido2" value="#{altaemp.emp.apellido2}" /><br/><br/>
+    <h:inputText label="apellido2" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Password: "/>
-    <h:inputText label="password" value="#{altaemp.emp.password}" /><br/><br/>
+    <h:inputText label="password" value="#{AdminControl}" /><br/><br/>
 
     <h:outputText value="Direccion: "/>
-    <h:inputText label="direccion" value="#{altaemp.emp.direccion}" /><br/><br/>
+    <h:inputText label="direccion" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Tlf: "/>
-    <h:inputText label="telefono" value="#{altaemp.emp.telefono}" /><br/><br/>
+    <h:inputText label="telefono" value="#{AdminControl}" /><br/><br/>
 
     <h:outputText value="email: "/>
-    <h:inputText label="email" value="#{altaemp.emp.email}" /><br/><br/>
+    <h:inputText label="email" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Fecha nacimiento: "/>
-    <h:inputText label="fecha_nacimiento" value="#{altaemp.emp.fecha_nacimiento}" /><br/><br/>
+    <h:inputText label="fecha_nacimiento" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Fecha alta: "/>
-    <h:inputText label="fecha_alta" value="#{altaemp.emp.fecha_alta}" /><br/><br/>
+    <h:inputText label="fecha_alta" value="#{AdminControl}" /><br/><br/>
     
     <h:outputText value="Observaciones: "/>
-    <h:inputText label="observaciones" value="#{altaemp.emp.observaciones}" /><br/><br/>
+    <h:inputText label="observaciones" value="#{AdminControl}" /><br/><br/>
 
-    <h:commandButton value="Confirmar" action="#{altaemp.confirmar}" />
+    <h:commandButton value="Confirmar" action="#{AdminControl}" />
 </h:form>
     </h:body>
 </html>
