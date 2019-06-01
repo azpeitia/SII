@@ -87,7 +87,9 @@ public class NjControl {
         
     }
     
-    public List<Jovenes> getNjs(){return null;}
+    public List<Jovenes> getNjs(){
+        return negocio.getNjs();
+    }
     
     
 }

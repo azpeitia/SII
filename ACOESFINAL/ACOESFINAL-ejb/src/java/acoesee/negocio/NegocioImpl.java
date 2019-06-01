@@ -193,5 +193,10 @@ public class NegocioImpl implements Negocio {
         l = q.getResultList();
         return l;
     }
+    
+    public List<Jovenes> getNjs(){
+        Query q = em.createQuery("SELECT j FROM (APP.jovenes) j");
+        return q.getResultList();
+    }
 
 }
