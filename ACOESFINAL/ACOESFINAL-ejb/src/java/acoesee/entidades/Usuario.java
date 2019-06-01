@@ -24,6 +24,7 @@ import javax.persistence.TemporalType;
  *
  * @author Javier
  */
+
 @Entity
 public class Usuario implements Serializable {
 
