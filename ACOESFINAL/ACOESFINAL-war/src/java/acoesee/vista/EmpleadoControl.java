@@ -26,7 +26,7 @@ public class EmpleadoControl implements Serializable {
 
     @Inject
     private Negocio negocio;
-    @Inject
+
     private Usuario usuario;
     
     /**

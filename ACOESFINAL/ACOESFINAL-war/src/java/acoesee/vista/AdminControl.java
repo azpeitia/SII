@@ -41,6 +41,7 @@ public class AdminControl {
     @Inject
     private InfoSesion sesion;
     
+    private Usuario usuario;
     
     
     public List<Mensaje> getMensajes() {
@@ -50,15 +51,11 @@ public class AdminControl {
         }catch(ACOESException e){
             return null;
         }
-	
-	@Inject
-    private Negocio negocio;
-	
-    @Inject
-    private Usuario usuario;
+    }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+
+    public void setUsuario(Usuario user) {
+        this.usuario = user;
     }
 
     public Usuario getUsuario() {

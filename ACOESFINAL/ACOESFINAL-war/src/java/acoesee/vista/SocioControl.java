@@ -22,6 +22,8 @@ public class SocioControl {
     @Inject
     private Negocio negocio;
     @Inject
+    private InfoSesion infoSesion;
+    
     private Usuario usuario;
 
     public void setUsuario(Usuario usuario) {

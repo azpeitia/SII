@@ -6,6 +6,7 @@
 package acoesee.vista;
 
 
+import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Mensaje;
 import java.io.Serializable;
 import java.util.List;

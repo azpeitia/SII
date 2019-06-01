@@ -136,7 +136,8 @@ public class NegocioImpl implements Negocio {
         else
             System.out.println("La lista TIENE COSAS");
         return msgs;
-
+    }
+    @Override
     public void insertarNj(Jovenes nj){
         em.persist(nj);
     }
