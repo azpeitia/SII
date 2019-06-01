@@ -73,11 +73,27 @@ public class SocioControl {
         }
     }
 
-    public void modificarUsuario(Usuario u){
+    
 
-    }
-
-    public void eliminarUsuario (Usuario u){
+    public String eliminarUsuario (Usuario u){
+        
+        try{
+            negocio.eliminarUsuario(u) ;
+        }catch(ACOESException e){
+        }
+        Usuario user=infoSesion.getUsuario();
+        
+        switch (user.getRol().getNombre()) {
+            case "Administrador":
+                return "admin.xhtml";
+                
+            case "Empleado":
+                return "empleado.xhtml";
+                
+            case "Socio":
+                return "socio.xhtml";
+        }
+        return null;
 
     }
 
