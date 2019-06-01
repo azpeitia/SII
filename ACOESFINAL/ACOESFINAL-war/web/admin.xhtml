@@ -14,6 +14,17 @@
         <br />
         <br />
         
+
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <title>Ventana de administrador<h:outputLabel value="#{emp.nombre}"/></title>
+    </head>
+        <!--pongo esto en comentario porque si no no me funciona-->
+        <!--<p>Hola <h:outputText value="#{emp.nombre}"/>!!</p>
+        <br />
+        <br />
+        <br />-->
+        <body>
         <h:button value="Solicitudes pendientes" outcome="solicitudes.xhtml"/>
         <br />
         <h:button value="Lista de admins" outcome="admins.xhtml"/>
@@ -38,7 +49,8 @@
         <br />
         <h:button value="Datos personales" outcome="mostrardatosadmin.xhtml"/>
         <br />
+
         
        </h:body>
-</html>   
- 
+
+</html>

@@ -62,6 +62,18 @@
                                 #{e.email} 
                             </h:column>
                              
+                            
+                             
+                            <c:when test="#{infoSesion.admin}">
+                                
+                                 <h:commandButton value="Modificar Empleado" action="#{empleadoControl.modificar(e)}"/>
+                                 
+                                 <br></br>
+                                
+                                <h:commandButton value="Eliminar Empleado" action="#{empleadoControl.eliminarEmpleado(e)}" />
+                                
+                            </c:when>>
+                             
                          </h:dataTable>
                          
 

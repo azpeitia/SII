@@ -107,7 +107,6 @@ public class Login {
             negocio.compruebaLogin(usuario);
             Usuario user = negocio.refrescarUsuario(usuario);
             sesion.setUsuario(user);
-            FacesMessage fm = new FacesMessage("El rol cogido es "+user.getRol().getNombre());
             if(user.getRol().getNombre() .equals ("Socio")){
                 return "socio.xhtml";
             }else if (user.getRol().getNombre().equals("Administrador")){

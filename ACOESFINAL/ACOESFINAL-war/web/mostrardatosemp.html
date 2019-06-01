@@ -1,87 +1,86 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    
     <h:head>
         <title>Modificar Datos</title>
     </h:head>
     <h:body>
         <h:form id="myform">
     
-    <h:messages globalOnly="true" style="color:red;margin:8px;" />
-    
-    <h:outputText value="dni: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.dni}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.dni}"/>
-    <h:message for="dni"/>
-    <br/><br/>  
-    
-    <h:outputText value="nickname: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.nick}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.nick}"/>
-    <h:message for="nick"/>
-    <br/><br/>
-  
-    <h:outputText value="Nombre: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.nombre}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.nombre}"/>
-    <h:message for="nombre"/>
-    <br/><br/>
-    
-    <h:outputText value="Apellido 1: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.apellido1}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.apellido1}"/>
-    <h:message for="apellido1"/>
-    <br/><br/>
-    
-    <h:outputText value="Apellido 2: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.apellido2}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.apellido2}"/>
-    <h:message for="apellido2"/>
-    <br/><br/>
-    
-    <h:outputText value="Password: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.password}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.password}"/>
-    <h:message for="password"/>
-    <br/><br/>
+            <h:messages globalOnly="true" style="color:red;margin:8px;" />
 
-    <h:outputText value="Direccion: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.direccion}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.direccion}"/>
-    <h:message for="direccion"/>
-    <br/><br/>
+            <h:outputText value="dni: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.dni}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.dni}"/>
+            <h:message for="dni"/>
+            <br/><br/>  
+
+            <h:outputText value="nickname: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.nick}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.nick}"/>
+            <h:message for="nick"/>
+            <br/><br/>
+
+            <h:outputText value="Nombre: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.nombre}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.nombre}"/>
+            <h:message for="nombre"/>
+            <br/><br/>
+
+            <h:outputText value="Apellido 1: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.apellido1}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.apellido1}"/>
+            <h:message for="apellido1"/>
+            <br/><br/>
+
+            <h:outputText value="Apellido 2: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.apellido2}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.apellido2}"/>
+            <h:message for="apellido2"/>
+            <br/><br/>
+
+            <h:outputText value="Password: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.password}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.password}"/>
+            <h:message for="password"/>
+            <br/><br/>
+
+            <h:outputText value="Direccion: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.direccion}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.direccion}"/>
+            <h:message for="direccion"/>
+            <br/><br/>
+
+            <h:outputText value="Tlf: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.telefono}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.telefono}"/>
+            <h:message for="telefono"/>
+            <br/><br/>
+
+            <h:outputText value="email: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.email}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.email}"/>
+            <h:message for="email"/>
+            <br/><br/>
+
+            <h:outputText value="Fecha nacimiento: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.fecha_nacimiento}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.fecha_nacimiento}"/>
+            <h:message for="fecha_nacimiento"/>
+            <br/><br/>
+
+            <h:outputText value="Fecha alta: "/>
+            <h:outputText value="#{mostrardatosemp.usuario.fecha_alta}" />
+            <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.fecha_alta}"/>
+            <h:message for="fecha_alta"/>
+            <br/><br/>
+
+            <h:commandButton value="Confirmar" action="#{modificardatos.confirmar}" />
     
-    <h:outputText value="Tlf: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.telefono}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.telefono}"/>
-    <h:message for="telefono"/>
-    <br/><br/>
-    
-    <h:outputText value="email: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.email}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.email}"/>
-    <h:message for="email"/>
-    <br/><br/>
-    
-    <h:outputText value="Fecha nacimiento: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.fecha_nacimiento}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.fecha_nacimiento}"/>
-    <h:message for="fecha_nacimiento"/>
-    <br/><br/>
-    
-    <h:outputText value="Fecha alta: "/>
-    <h:outputText value="#{mostrardatosemp.usuario.fecha_alta}" />
-    <h:inputText id ="nombre" value="#{mostrardatosemp.contacto.fecha_alta}"/>
-    <h:message for="fecha_alta"/>
-    <br/><br/>
-    
-    <h:commandButton value="Confirmar" action="#{modificardatos.confirmar}" />
-    
-</h:form>
+        </h:form>
     </h:body>
-</html>
+</xhtml>
 

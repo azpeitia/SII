@@ -5,6 +5,7 @@
  */
 package acoesee.vista;
 
+
 import acoesee.entidades.Mensaje;
 import java.io.Serializable;
 import java.util.List;
@@ -18,23 +19,48 @@ import javax.inject.Inject;
  *
  * @author Javier
  */
-@Named (value="mensajeControl")
+
+
+@Named 
 @RequestScoped
-public class MensajeControl implements Serializable{
+public class MensajeControl {
+    private Long dni ;
+    private Long idjoven;
     
-    
+        
     @Inject
     private Negocio negocio;
     
-    
-    
-   
 
-    
+    public void setDni(Long dni) {
+        this.dni = dni;
+    }
 
-    
+    public void setIdjoven(Long idjoven) {
+        this.idjoven = idjoven;
+    }
 
+    public Long getDni() {
+        return dni;
+    }
+
+    public Long getIdjoven() {
+        return idjoven;
+    }
     
+    public void setNegocio(Negocio negocio) {
+        this.negocio = negocio;
+    }
+
+    public Negocio getNegocio() {
+        return negocio;
+    }
+    
+    public void altaMensaje() throws ACOESException{
+        Apadrinamientos ap ;
+        ap = negocio.getapadrinamiento(dni, idjoven);
+        negocio.insertMensaje(ap) ;
+    }
     
     
 }

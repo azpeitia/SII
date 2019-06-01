@@ -5,9 +5,9 @@
  */
 package acoesee.vista;
 
-import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
+import acoesee.negocio.ContraseniaInvalidaException;
 import acoesee.negocio.CuentaInexistenteException;
 import acoesee.negocio.Negocio;
 import java.util.ArrayList;
@@ -20,36 +20,37 @@ import javax.faces.model.ArrayDataModel;
 import javax.faces.model.DataModel;
 import javax.inject.Inject;
 
+
 /**
  *
  * @author Dave
  */
-@Named(value = "listaraps")
+@Named(value = "listadmins")
 @RequestScoped
-public class ListarAps {
+public class ListarAdmins {
     
     private static final long serialVersionUID = 1L;
     
-    private static final ArrayList<Apadrinamientos> personList = new ArrayList<>();
+    private static final ArrayList<Usuario> personList = new ArrayList<>();
 	
-    private static final Apadrinamientos[] aps = new Apadrinamientos[]{};
+    private static final Usuario[] users = new Usuario[]{};
     
     @Inject
     private Negocio negocio;
 
                
-    public ArrayList<Apadrinamientos> getPersonList() {
+    public ArrayList<Usuario> getPersonList() {
  
 		return personList;
-                
+ 
 	}
 	
 	public String saveAction() throws ACOESException {
 	    
 		//get all existing value but set "editable" to false 
-		for (Apadrinamientos ap : personList){
-			ap.setEditable(false);
-                        negocio.modificar(ap);
+		for (Usuario user : personList){
+			user.setEditable(false);
+                        negocio.modificar(user);
 		}
 		
 		//return to current page
@@ -57,16 +58,16 @@ public class ListarAps {
 		
 	}
         
-        public String deleteAction(Apadrinamientos ap) {
-		personList.remove(ap);
-                negocio.eliminarAp(ap);
+        public String deleteAction(Usuario user) throws ACOESException {
+		personList.remove(user);
+                negocio.eliminarUsuario(user);
 
 		return null;
 	}
 	
-	public String editAction(Apadrinamientos ap) {
+	public String editAction(Usuario user) {
 	    
-		ap.setEditable(true);
+		user.setEditable(true);
 		return null;
 	}
         

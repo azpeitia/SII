@@ -26,6 +26,7 @@ public class EmpleadoControl implements Serializable {
 
     @Inject
     private Negocio negocio;
+    @Inject
     private Usuario usuario;
     
     /**
@@ -39,6 +40,13 @@ public class EmpleadoControl implements Serializable {
         return negocio.getUsuarios(r);
     }
     
+    public void eliminarEmpleado(Usuario u) throws ACOESException{
+        negocio.eliminarUsuario(u);
+    }
    
+    public String modificar(Usuario c) {
+        usuario = c;
+        return "mostrardatpsemp.xhtml";
+    }
     
 }

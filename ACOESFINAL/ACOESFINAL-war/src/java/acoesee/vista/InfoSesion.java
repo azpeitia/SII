@@ -16,6 +16,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
+import acoesee.negocio.ACOESException;
 
 /**
  *
@@ -66,6 +67,18 @@ public class InfoSesion implements Serializable {
         
     }
     
+        public synchronized void refrescarUsuario()
+    {
+        try {
+        if (usuario != null)
+        {
+            usuario = negocio.refrescarUsuario(usuario);
+        } 
+        }
+        catch (ACOESException e) {
+            // TODO
+        }
+    }    
    
     
 }
