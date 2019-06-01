@@ -86,6 +86,8 @@ public class NegocioImpl implements Negocio {
        em.merge(user);
        
     }
+    
+   
 
     @Override
     public void eliminarUsuario(Usuario user) throws ACOESException {
@@ -97,8 +99,8 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public void modificar(Apadrinamientos ap) {
-
-        em.merge(ap);
+        Apadrinamientos apa=em.find(Apadrinamientos.class, ap.getId_apadrinamiento());
+       em.merge(apa);
     }
 
 
