@@ -11,7 +11,7 @@
         
              
                 <h:form id="mensajes">
-                    <h:dataTable value="#{adminControl.getMensajes()}" var="c">
+                    <h:dataTable value="#{AdminControl.mensajes}" var="c">
                         <h:column>
                             <f:facet name="header">Mensaje ID</f:facet>
                             <h:outputText value="#{c.id}"/>
