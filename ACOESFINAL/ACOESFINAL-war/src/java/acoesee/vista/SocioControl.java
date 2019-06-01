@@ -23,8 +23,9 @@ public class SocioControl {
     private Negocio negocio;
     @Inject
     private InfoSesion infoSesion;
-    
+
     private Usuario usuario;
+
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
@@ -33,7 +34,7 @@ public class SocioControl {
     public Usuario getUsuario() {
         return usuario;
     }
-    
+
     public String modificarSocio() throws ACOESException{
         negocio.modificarSocio(usuario) ;
         return "socio.xhtml" ;
