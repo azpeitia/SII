@@ -67,8 +67,10 @@ public class NegocioImpl implements Negocio {
         
     }
     
-    
-
+    public List<Usuario> getUsuarios2 (String s)throws ACOESException{
+        Query q = em.createQuery("Select u from Usuario u where u.rol.nombre='"+s+"'");
+        return q.getResultList();
+    }
     
     @Override
     public void eliminarAp(Apadrinamientos ap) {

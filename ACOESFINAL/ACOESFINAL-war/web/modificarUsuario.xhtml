@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>Modificar un Socio</title>
+    </h:head>
+    <h:body>
+        
+            <h:form id="modificarsoc">
+                    <h:panelGrid columns="3">
+                        <h:outputText value="Nombre"/>
+                        <h:inputText id ="nombre" value="#{socioControl.getUsuario().nombre}"/>
+                        <h:message for="nombre"/>
+
+                        <h:outputText value="Primer Apellido"/>
+                        <h:inputText id ="Apell1" value="#{socioControl.getUsuario().apellido1}"/>
+                        <h:message for="telefono"/>
+
+                        <h:outputText value="e-mail"/>
+                        <h:inputText id ="Apell2" value="#{socioControl.getUsuario().apellido2}"/>
+                        <h:message for="email"/>
+
+                        <h:commandButton value="Modificar" action="#{socioControl}"/>
+                        <h:commandButton value="Cancelar" action="admin.xhtml"/>
+
+                        <h:inputHidden value="#{contactos.modo}"/>
+                        <h:inputHidden value="#{contactos.contacto.id}"/>
+
+                    </h:panelGrid>
+            </h:form>
+        
+        
+        <h:form>
+  
+    <h:messages globalOnly="true" style="color:red;margin:8px;" />
+  
+    <h:outputText value="Nombre: "/>
+    <h:inputText label="nombre" value="#{altaemp.emp.nombre}" /><br/><br/>
+    <h:message for="nombre"/>
+    
+    <h:outputText value="Apellido 1: "/>
+    <h:inputText label="apellido1" value="#{altaemp.emp.apellido1}" /><br/><br/>
+    
+    <h:outputText value="Apellido 2: "/>
+    <h:inputText label="apellido2" value="#{altaemp.emp.apellido2}" /><br/><br/>
+    
+    <h:outputText value="Password: "/>
+    <h:inputText label="password" value="#{altaemp.emp.password}" /><br/><br/>
+    
+    <h:outputText value="Estado: "/>
+    <h:inputText label="estado" value="#{altaemp.emp.estado}" /><br/><br/>
+
+    
+    <h:outputText value="Direccion: "/>
+    <h:inputText label="direccion" value="#{altaemp.emp.direccion}" /><br/><br/>
+    
+    <h:outputText value="Tlf: "/>
+    <h:inputText label="telefono" value="#{altaemp.emp.telefono}" /><br/><br/>
+    
+    <h:outputText value="email: "/>
+    <h:inputText label="email" value="#{altaemp.emp.email}" /><br/><br/>
+    
+    <h:outputText value="Fecha nacimiento: "/>
+    <h:inputText label="fecha_nacimiento" value="#{altaemp.emp.fecha_nacimiento}" /><br/><br/>
+    
+    <h:outputText value="Fecha alta: "/>
+    <h:inputText label="fecha_alta" value="#{altaemp.emp.fecha_alta}" /><br/><br/>
+    
+</h:form>
+    </h:body>
+</html>
