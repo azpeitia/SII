@@ -6,11 +6,13 @@
 package acoesee.vista;
 
 import acoesee.entidades.Apadrinamientos;
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
 import acoesee.negocio.CuentaInexistenteException;
 import acoesee.negocio.Negocio;
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
@@ -30,7 +32,7 @@ public class ListarAps {
     
     private static final long serialVersionUID = 1L;
     
-    private static final ArrayList<Apadrinamientos> personList = new ArrayList<>();
+    private static List<Apadrinamientos> personList = new ArrayList<>();
 	
     private Apadrinamientos apa;
     
@@ -39,11 +41,10 @@ public class ListarAps {
     
     @Inject
     private InfoSesion sesion;
-    
-    public ArrayList<Apadrinamientos> getPersonList() {
- 
-		return personList;
-                
+public List<Apadrinamientos> getPersonList() throws ACOESException {
+        Rol r = new Rol("ADMIN");
+        personList = negocio.getapadrinamientos();
+        return personList;
 	}
 	
 	public String saveAction() throws ACOESException {

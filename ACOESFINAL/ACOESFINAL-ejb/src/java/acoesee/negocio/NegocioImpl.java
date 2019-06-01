@@ -18,6 +18,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -60,7 +61,7 @@ public class NegocioImpl implements Negocio {
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados = null;
 
-        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r.getNombre()+"’ ");
         empleados=q.getResultList();
 
         return empleados;
@@ -152,12 +153,14 @@ public class NegocioImpl implements Negocio {
     @Override
     public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException{
          Apadrinamientos ap ;
-         Query q = em.createQuery("Select e from apadrinamiento e where e.joven = "
+         Query q = em.createQuery("Select e from apadrinamientos e where e.joven = "
                  + "(Select e from jovenes e where e.id = "+idnj+") and "
                  + "e.usuario = (Select e form Usuario e where e.dni="+dni+") ");
          ap = (Apadrinamientos) q.getResultList().get(0) ;
         return ap;
     }
+    
+    
     @Override
     public void insertarSolicitud (Usuario u) throws ACOESException{
         Usuario user = em.find(Usuario.class, u.getNick());
@@ -172,7 +175,14 @@ public class NegocioImpl implements Negocio {
             
         }
         
-        
+    }
+
+    @Override
+    public List<Apadrinamientos> getapadrinamientos() throws ACOESException {
+        List<Apadrinamientos> l = new ArrayList<>();
+        Query q = em.createQuery("Select e from apadrinamientos e");
+        l = q.getResultList();
+        return l;
     }
     
 }
