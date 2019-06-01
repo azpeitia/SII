@@ -7,6 +7,7 @@
 package acoesee.vista;
 
 import acoesee.entidades.Usuario;
+import acoesee.negocio.ACOESException;
 import acoesee.negocio.Negocio;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -49,7 +50,13 @@ public class SolicitudControl {
     public String accion(){
         if(terms){
             
-            return "Socio.xhtml";
+            try{
+                negocio.insertarSolicitud(infoSesion.getUsuario());
+            }catch(ACOESException e){
+                
+            }
+            
+            return "socio.xhtml";
         }
         else{
             

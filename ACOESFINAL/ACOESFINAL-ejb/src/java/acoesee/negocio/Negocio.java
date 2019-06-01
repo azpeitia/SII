@@ -23,7 +23,7 @@ public interface Negocio {
      public void compruebaLogin(Usuario u) throws ACOESException;
      public void modificarSocio(Usuario user) throws ACOESException;
      public Usuario refrescarUsuario(Usuario u) throws ACOESException;
-
+     public void insertarSolicitud (Usuario u) throws ACOESException;
      public List<Mensaje> getMensajes() throws ACOESException;
 
      public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException;
