@@ -5,6 +5,7 @@
  */
 package acoesee.vista;
 
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.ACOESException;
 import acoesee.negocio.ContraseniaInvalidaException;
@@ -39,8 +40,9 @@ public class ListarAdmins {
     private Negocio negocio;
 
                
-    public ArrayList<Usuario> getPersonList() {
- 
+    public ArrayList<Usuario> getPersonList() throws ACOESException {
+            Rol r = new Rol("ADMIN");
+                negocio.getUsuarios(r);
 		return personList;
  
 	}

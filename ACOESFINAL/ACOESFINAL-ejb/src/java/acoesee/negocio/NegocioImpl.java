@@ -60,7 +60,7 @@ public class NegocioImpl implements Negocio {
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados = null;
 
-        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r.getId_rol()+"’ ");
         empleados=q.getResultList();
 
         return empleados;
