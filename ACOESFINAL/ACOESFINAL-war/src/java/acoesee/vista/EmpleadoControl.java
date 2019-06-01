@@ -14,40 +14,31 @@ import acoesee.negocio.ACOESException;
 import acoesee.negocio.Negocio;
 import java.io.Serializable;
 import java.util.List;
-import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 
-@Named(value = "EmpleadoControl")
-@RequestScoped
-public class EmpleadoControl {
+@Named(value = "empleadoControl")
+@SessionScoped
+public class EmpleadoControl implements Serializable {
 
     @Inject
     private Negocio negocio;
-    
-    @Inject
-    private InfoSesion sesion;
-    
+
     private Usuario usuario;
     
-   
+    /**
+     * Creates a new instance of InfoSesion
+     */
+    public EmpleadoControl() {
+    }
     
     public List<Usuario> getEmpleados() throws ACOESException{
-        Rol r = new Rol("Empleado");
+        Rol r = new Rol("empleado");
         return negocio.getUsuarios(r);
     }
-    
-    public void setUsuario(Usuario user) {
-        this.usuario = user;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-    
     
     public void eliminarEmpleado(Usuario u) throws ACOESException{
         negocio.eliminarUsuario(u);
@@ -55,7 +46,7 @@ public class EmpleadoControl {
    
     public String modificar(Usuario c) {
         usuario = c;
-        return "mostrardatosemp.xhtml";
+        return "mostrardatpsemp.xhtml";
     }
     
 }

@@ -77,7 +77,6 @@ public class NegocioImpl implements Negocio {
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
-        em.flush();
     }
     
 

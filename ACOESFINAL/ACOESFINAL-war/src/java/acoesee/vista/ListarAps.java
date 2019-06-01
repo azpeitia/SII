@@ -32,14 +32,12 @@ public class ListarAps {
     
     private static final ArrayList<Apadrinamientos> personList = new ArrayList<>();
 	
-    private Apadrinamientos apa;
+    private static final Apadrinamientos[] aps = new Apadrinamientos[]{};
     
     @Inject
     private Negocio negocio;
-    
-    @Inject
-    private InfoSesion sesion;
-    
+
+               
     public ArrayList<Apadrinamientos> getPersonList() {
  
 		return personList;
@@ -59,26 +57,17 @@ public class ListarAps {
 		
 	}
         
-        public void setApadrinamiento(Apadrinamientos ap) {
-            this.apa = ap;
-        }
+        public String deleteAction(Apadrinamientos ap) {
+		personList.remove(ap);
+                negocio.eliminarAp(ap);
 
-        public Apadrinamientos getApadrinamiento() {
-            return apa;
-        }
-    
-        
-        
-        public void deleteAction(Apadrinamientos a) {
-		negocio.eliminarAp(a);
-                //negocio.eliminarAp(aps);
-
+		return null;
 	}
 	
 	public String editAction(Apadrinamientos ap) {
 	    
-		apa=ap;
-                return "modificarapa.xhtml";
+		ap.setEditable(true);
+		return null;
 	}
         
 }

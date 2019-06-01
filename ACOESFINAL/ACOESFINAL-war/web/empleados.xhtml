@@ -17,7 +17,7 @@
                          
                          
                          
-                         <h:dataTable value="#{EmpleadoControl.empleados}" var="e" border="2"
+                         <h:dataTable value="#{empleadoControl.empleados}" var="e" border="2"
                                 cellspacing="1" cellpadding="1">
                              
                             <h:column>
@@ -66,11 +66,11 @@
                              
                             <c:when test="#{infoSesion.admin}">
                                 
-                                 <h:commandButton value="Modificar Empleado" action="#{EmpleadoControl.modificar(e)}"/>
+                                 <h:commandButton value="Modificar Empleado" action="#{empleadoControl.modificar(e)}"/>
                                  
                                  <br></br>
                                 
-                                <h:commandButton value="Eliminar Empleado" action="#{EmpleadoControl.eliminarEmpleado(e)}" />
+                                <h:commandButton value="Eliminar Empleado" action="#{empleadoControl.eliminarEmpleado(e)}" />
                                 
                             </c:when>>
                              

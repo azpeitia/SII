@@ -48,8 +48,8 @@
             <c:choose>
                 <c:when test="#{infoSesion.admin||infoSesion.empleado}">
                         <h:form>
-                            <h:commandButton value="Modificar" action="#{listaraps.editAction(l)}" />
-                            <h:commandButton value="Eliminar" action="#{listaraps.deleteAction(l)}" />
+                            <h:commandButton value="Modificar" action="#{listaraps.editAction(l.id_apadrinamiento)}" />
+                            <h:commandButton value="Eliminar" action="#{listaraps.deleteAction(l.id_apadrinamiento)}" />
                         </h:form>
                     </c:when>
             </c:choose>
