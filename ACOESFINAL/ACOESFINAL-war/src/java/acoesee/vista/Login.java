@@ -5,6 +5,7 @@
  */
 package acoesee.vista;
 
+import acoesee.entidades.Mensaje;
 import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import javax.ejb.EJB;
@@ -14,6 +15,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import acoesee.negocio.*;
+import java.util.List;
 /**
  *
  * @author francis
@@ -125,5 +127,7 @@ public class Login {
         }
         return null;
     }
+    
+    
 
 }

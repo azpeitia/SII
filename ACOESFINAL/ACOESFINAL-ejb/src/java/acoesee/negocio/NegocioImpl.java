@@ -9,6 +9,7 @@ package acoesee.negocio;
 
 import acoesee.entidades.Rol;
 import acoesee.entidades.Apadrinamientos;
+import acoesee.entidades.Mensaje;
 import acoesee.entidades.Usuario;
 import java.util.List;
 import java.util.Random;
@@ -122,6 +123,16 @@ public class NegocioImpl implements Negocio {
         if(user == null) throw new CuentaInexistenteException();
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         return user;
+    }
+    
+    @Override
+    public List<Mensaje> getMensajes() throws ACOESException{
+        List<Mensaje> msgs = em.createQuery("SELECT m FROM Mensaje m").getResultList();
+        if (msgs.isEmpty())
+            System.out.println("La lista ESTÄ VACIA...");
+        else
+            System.out.println("La lista TIENE COSAS");
+        return msgs;
     }
     
 }

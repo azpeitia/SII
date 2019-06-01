@@ -7,6 +7,7 @@ import acoesee.entidades.Rol;
 
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
+import acoesee.entidades.Mensaje;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -22,4 +23,5 @@ public interface Negocio {
      public void compruebaLogin(Usuario u) throws ACOESException;
      public void modificarSocio(Usuario user) throws ACOESException;
      public Usuario refrescarUsuario(Usuario u) throws ACOESException;
+     public List<Mensaje> getMensajes() throws ACOESException;
 }
