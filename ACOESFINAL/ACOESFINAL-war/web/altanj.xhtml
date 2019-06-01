@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -13,38 +13,50 @@
   
   
     <h:outputText value="Nombre: "/>
-    <h:inputText id="nombre" required="true" value="#{NjControl.nj.nombre}" /><br/><br/>
+    <h:inputText id="nombre" required="true" value="#{njcontrol.nj.nombre}" /><br/><br/>
     <h:message for="nombre"/>
     
     <h:outputText value="Apellido 1: "/>
-    <h:inputText id="apellido1" required ="true" value="#{NjControl.nj.apellido1}" /><br/><br/>
+    <h:inputText id="apellido1" required ="true" value="#{njcontrol.nj.apellido1}" /><br/><br/>
     <h:message for="apellido1"/>
     
     <h:outputText value="Apellido 2: "/>
-    <h:inputText id="apellido2" required ="true" value="#{NjControl.nj.apellido2}" /><br/><br/>
+    <h:inputText id="apellido2" required ="true" value="#{njcontrol.nj.apellido2}" /><br/><br/>
     <h:message for="apellido2"/>
-        
+    
+    <h:outputText value="Estado: "/>
+    <h:inputText id="estado" required ="true" value="#{njcontrol.nj.estado}" /><br/><br/>
+    <h:message for="estado"/>
+    
+    <h:outputText value="Foto: "/>
+    <h:inputText id="foto" required ="true" value="#{njcontrol.nj.foto_joven}" /><br/><br/>
+    <h:message for="foto"/>
+    
     <h:outputText value="Fecha nacimiento: "/>
-    <h:inputText id="fecha_nacimiento" required ="true" value="#{NjControl.nj.fecha_nacimiento}" /><br/><br/>
+    <h:inputText id="fecha_nacimiento" required ="true" value="#{njcontrol.nj.fecha_nacimiento}" /><br/><br/>
     <h:message for="fecha_nacimiento"/>
     
     <h:outputText value="Grado del curso: "/>
-    <h:inputText id="grado_curso" required ="true" value="#{NjControl.nj.grado_curso}" /><br/><br/>
+    <h:inputText id="grado_curso" required ="true" value="#{njcontrol.nj.grado_curso}" /><br/><br/>
     <h:message for="grado_curso"/>
     
     <h:outputText value="Procedencia: "/>
-    <h:inputText id="procedencia" required ="true" value="#{NjControl.nj.procedencia}" /><br/><br/>
+    <h:inputText id="procedencia" required ="true" value="#{njcontrol.nj.procedencia}" /><br/><br/>
     <h:message for="procedencia"/>
     
+    <h:outputText value="Colonia actual: "/>
+    <h:inputText id="colonia_actual" required ="true" value="#{njcontrol.nj.colonia_actual}" /><br/><br/>
+    <h:message for="colonia_actual"/>
+    
     <h:outputText value="Fecha alta: "/>
-    <h:inputText id="fecha_alta" required ="true" value="#{NjControl.nj.fecha_alta}" /><br/><br/>
+    <h:inputText id="fecha_alta" required ="true" value="#{njcontrol.nj.fecha_alta}" /><br/><br/>
     <h:message for="fecha_alta"/>
     
     <h:outputText value="Observaciones: "/>
-    <h:inputText id="observaciones" required ="true" value="#{NjControl.nj.observaciones}" /><br/><br/>
+    <h:inputText id="observaciones" required ="true" value="#{njcontrol.nj.observaciones}" /><br/><br/>
     <h:message for="observaciones"/>
     
-    <h:commandButton value="Confirmar" action="#{NjControl.insertarNj()}" />
+    <h:commandButton value="Confirmar" action="#{njcontrol.insertarNj()}" />
 
 </h:form>
     </h:body>
