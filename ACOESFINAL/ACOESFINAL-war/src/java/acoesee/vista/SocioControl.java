@@ -16,7 +16,7 @@ import acoesee.negocio.*;
  *
  * @author dosgr
  */
-@Named(value = "listaradmins")
+@Named
 @RequestScoped
 public class SocioControl {
     @Inject
@@ -25,6 +25,7 @@ public class SocioControl {
     private InfoSesion infoSesion;
     
     private Usuario usuario;
+    
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
