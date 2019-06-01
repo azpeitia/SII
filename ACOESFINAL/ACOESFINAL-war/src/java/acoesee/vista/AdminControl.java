@@ -69,8 +69,8 @@ public class AdminControl {
     }
     
     public List<Usuario> getAdmins() throws ACOESException{
-        Rol admin = new Rol("administradores") ;
-        return negocio.getUsuarios(admin) ;
+
+        return negocio.getUsuarios2("Administradores") ;
     }
     
 }
