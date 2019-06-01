@@ -46,7 +46,7 @@ public class EmpleadoControl implements Serializable {
    
     public String modificar(Usuario c) {
         usuario = c;
-        return "mostrardatpsemp.xhtml";
+        return "mostrardatosemp.xhtml";
     }
     
 }

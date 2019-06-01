@@ -16,7 +16,7 @@ import acoesee.negocio.*;
  *
  * @author dosgr
  */
-@Named(value = "listaradmins")
+@Named
 @RequestScoped
 public class SocioControl {
     @Inject
@@ -35,7 +35,12 @@ public class SocioControl {
     }
     
     public String modificarSocio() throws ACOESException{
-        negocio.modificarSocio(usuario) ;
+        negocio.modificar(usuario) ;
         return "socio.xhtml" ;
+    }
+    
+        public String modificar(Usuario c) {
+        usuario = c;
+        return "modificarsocio.xhtml";
     }
 }
