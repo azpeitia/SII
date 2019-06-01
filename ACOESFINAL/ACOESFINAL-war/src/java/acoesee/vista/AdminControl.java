@@ -48,6 +48,8 @@ public class AdminControl {
     }
     
     
+    
+    
     public List<Mensaje> getMensajes() {
         try{
             List<Mensaje> mensajes=negocio.getMensajes();

@@ -82,11 +82,9 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public void modificar(Usuario u) throws ACOESException {
-        compruebaLogin(u);
-        EntityTransaction Ent = em.getTransaction() ;
-        Ent.begin();
-        em.merge(u);
-        Ent.commit();
+       Usuario user=em.find(Usuario.class, u.getNick());
+       em.merge(user);
+       
     }
 
     @Override
