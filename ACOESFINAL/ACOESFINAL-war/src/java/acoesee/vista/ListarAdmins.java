@@ -25,7 +25,7 @@ import javax.inject.Inject;
  *
  * @author Dave
  */
-@Named(value = "listaradmins")
+@Named(value = "listadmins")
 @RequestScoped
 public class ListarAdmins {
     
