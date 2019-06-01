@@ -59,7 +59,8 @@ public class NegocioImpl implements Negocio {
 
     @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
-        List<Usuario> empleados = null;
+        List<Usuario> empleados;
+
 
         Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r.getNombre()+"’ ");
         empleados=q.getResultList();
@@ -72,6 +73,18 @@ public class NegocioImpl implements Negocio {
         Query q = em.createQuery("Select u from Usuario u where u.rol.nombre='"+s+"'");
         return q.getResultList();
     }
+
+    /*
+    @Override
+    public List<Usuario> getUsuarios(Rol r)throws ACOESException{
+        List<Usuario> empleados = null; 
+        
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r+"’ ");
+        empleados=q.getResultList();
+        
+        return empleados;
+    }*/
+        
 
     @Override
     public void eliminarAp(Apadrinamientos ap) {
@@ -180,6 +193,11 @@ public class NegocioImpl implements Negocio {
         Query q = em.createQuery("SELECT e FROM Apadrinamientos e");
         l = q.getResultList();
         return l;
+    }
+    
+    public List<Jovenes> getNjs(){
+        Query q = em.createQuery("SELECT j FROM (APP.jovenes) j");
+        return q.getResultList();
     }
 
 }

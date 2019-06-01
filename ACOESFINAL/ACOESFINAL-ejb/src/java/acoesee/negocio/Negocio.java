@@ -30,4 +30,5 @@ public interface Negocio {
 
      public void insertMensaje(Apadrinamientos ap) throws ACOESException;
      public void insertarNj(Jovenes j);
+     public List<Jovenes> getNjs();
 }
