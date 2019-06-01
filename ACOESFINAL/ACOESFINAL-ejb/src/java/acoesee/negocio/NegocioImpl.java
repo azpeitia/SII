@@ -13,6 +13,13 @@ import acoesee.entidades.Mensaje;
 import acoesee.entidades.Usuario;
 import acoesee.entidades.Mensaje;
 import acoesee.entidades.Jovenes;
+import acoesee.entidades.Solicitud;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import javax.ejb.Stateless;
@@ -48,20 +55,24 @@ public class NegocioImpl implements Negocio {
     }
 
 
-    
+
 
     @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
         List<Usuario> empleados;
 
-        Query q = em.createQuery("SELECT u FROM (APP.USUARIO) u WHERE ROL_ID_ROL = "+r.getId_rol());
+
+        Query q = em.createQuery("Select e from usuario e where e.rol = ‘"+r.getNombre()+"’ ");
         empleados=q.getResultList();
 
         return empleados;
-        
+
     }
-    
-    
+
+    public List<Usuario> getUsuarios2 (String s)throws ACOESException{
+        Query q = em.createQuery("Select u from Usuario u where u.rol.nombre='"+s+"'");
+        return q.getResultList();
+    }
 
     /*
     @Override
@@ -74,27 +85,27 @@ public class NegocioImpl implements Negocio {
         return empleados;
     }*/
         
+
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
+        em.flush();
     }
-    
+
 
     @Override
     public void modificar(Usuario u) throws ACOESException {
-        compruebaLogin(u);
-        EntityTransaction Ent = em.getTransaction() ;
-        Ent.begin();
-        em.merge(u);
-        Ent.commit();
+       Usuario user=em.find(Usuario.class, u.getNick());
+       em.merge(user);
+
     }
 
     @Override
     public void eliminarUsuario(Usuario user) throws ACOESException {
         compruebaLogin(user);
         em.remove(em.merge(user));
-        em.flush();    
-    
+        em.flush();
+
     }
 
     @Override
@@ -103,22 +114,18 @@ public class NegocioImpl implements Negocio {
         em.merge(ap);
     }
 
-    @Override
-    public void modificarSocio(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public void compruebaLogin(Usuario u) throws ACOESException {
          //To change body of generated methods, choose Tools | Templates.
          Usuario user = em.find(Usuario.class, u.getNick());
-        if (user == null) 
+        if (user == null)
             throw new CuentaInexistenteException();
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
-        
+
 
     }
-    
+
     @Override
     public Usuario refrescarUsuario(Usuario u) throws ACOESException{
         Usuario user = em.find(Usuario.class, u.getNick());
@@ -126,7 +133,7 @@ public class NegocioImpl implements Negocio {
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         return user;
     }
-    
+
     @Override
 
     public List<Mensaje> getMensajes() throws ACOESException{
@@ -141,7 +148,7 @@ public class NegocioImpl implements Negocio {
     public void insertarNj(Jovenes nj){
         em.persist(nj);
     }
-    
+
      @Override
     public void insertMensaje(Apadrinamientos ap) throws ACOESException{
         Mensaje M = new Mensaje() ;
@@ -151,15 +158,40 @@ public class NegocioImpl implements Negocio {
         em.persist(M) ;
         Ent.commit();
     }
-    
+
     @Override
     public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException{
          Apadrinamientos ap ;
-         Query q = em.createQuery("Select e from apadrinamiento e where e.joven = "
+         Query q = em.createQuery("Select e from apadrinamientos e where e.joven = "
                  + "(Select e from jovenes e where e.id = "+idnj+") and "
                  + "e.usuario = (Select e form Usuario e where e.dni="+dni+") ");
          ap = (Apadrinamientos) q.getResultList().get(0) ;
         return ap;
     }
-    
+
+
+    @Override
+    public void insertarSolicitud (Usuario u) throws ACOESException{
+        Usuario user = em.find(Usuario.class, u.getNick());
+        if (user!=null){
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            Date date = new Date();
+            Solicitud sol= new Solicitud();
+            sol.setFecha(date);
+            sol.setUsuario(user);
+            em.persist(sol);
+        }else{
+
+        }
+
+    }
+
+    @Override
+    public List<Apadrinamientos> getapadrinamientos() throws ACOESException {
+        List<Apadrinamientos> l = new ArrayList<>();
+        Query q = em.createQuery("Select e from apadrinamientos e");
+        l = q.getResultList();
+        return l;
+    }
+
 }
