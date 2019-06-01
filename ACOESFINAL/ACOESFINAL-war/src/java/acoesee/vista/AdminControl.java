@@ -70,7 +70,9 @@ public class AdminControl {
     
     public List<Usuario> getAdmins() throws ACOESException{
 
+
         return negocio.getUsuarios2("Administradores") ;
+
     }
     
 }

@@ -46,9 +46,6 @@ public class Jovenes implements Serializable {
     private List<Apadrinamientos> apadrinamientos;   //Relación Uno a Muchos con Apadrinamientos
     
     
-    public List<Apadrinamientos> getapadrinamientos(){
-        return apadrinamientos;
-    }
     
     public void setApadhist(List<Apadrinamientos> a2){
         apadrinamientos = a2;
