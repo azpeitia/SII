@@ -4,20 +4,22 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
 
-        <title>Bien venido <h:outputLabel value="#{socio.socio.nombre}"/></title>
+        <title>Bien venido <h:outputLabel value="Usuario"/></title>
 
         
 
 
     </h:head>
     <h:body>
-        <h:button outcome="solicitarap.xhtml" value="Solicitar Apadrinamiento" />
+        <h:button outcome="solicitudApadrinamiento.xhtml" value="Quiero Apadrinar !" />
         <br></br>
         <h:button outcome="login.xhtml" value="Dar de baja"/>
         <br></br>
         <h:button outcome="listarap.xhtml" value="Lita de apadrinamientos actuales"/>
         <br></br>
-        <h:button outcome="modificarsocio.xhtml" value="Modificar mis datos"  />
+        <h:form id="sno">
+            <h:commandButton value="Modificar Datos" action="#{socioControl.modificar(infoSesion.usuario)}"/>
+        </h:form>
     </h:body>
 </html>
 

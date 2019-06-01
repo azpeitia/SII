@@ -32,8 +32,6 @@ public class Jovenes implements Serializable {
     private String nombre ;
     private String apellido1 ;
     private String apellido2 ;
-    private String estado ;
-    private String foto_joven ;
     @Temporal(TemporalType.DATE)
     private Date fecha_nacimiento ;
     @Temporal(TemporalType.DATE)
@@ -42,7 +40,6 @@ public class Jovenes implements Serializable {
     private Date fecha_baja ;
     private int grado_curso;
     private String procedencia ;
-    private String colonia_actual ;
     private String observaciones ;
     /*-------RELACIÓN---*/
     @OneToMany (mappedBy="joven")
@@ -78,21 +75,7 @@ public class Jovenes implements Serializable {
         this.apellido2 = apellido2;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
-    public String getFoto_joven() {
-        return foto_joven;
-    }
-
-    public void setFoto_joven(String foto_joven) {
-        this.foto_joven = foto_joven;
-    }
+    
 
     public Date getFecha_nacimiento() {
         return fecha_nacimiento;
@@ -134,13 +117,7 @@ public class Jovenes implements Serializable {
         this.procedencia = procedencia;
     }
 
-    public String getColonia_actual() {
-        return colonia_actual;
-    }
-
-    public void setColonia_actual(String colonia_actual) {
-        this.colonia_actual = colonia_actual;
-    }
+   
 
     public String getObservaciones() {
         return observaciones;
