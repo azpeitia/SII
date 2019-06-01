@@ -12,15 +12,15 @@
     <h:body>
     	
     	<h1>Administradores</h1>
-    	<h:form>
-    		<h:dataTable value="#{listaradmins.orderList}" var="l"
+    	<h:form id = "listadmins">
+    		<h:dataTable value="#{listadmins.orderList}" var="l"
     			styleClass="order-table"
     			headerClass="order-table-header"
     			rowClasses="order-table-odd-row,order-table-even-row"
     		>
                             
                         <h:column>
-                                <f:facet name="header">No</f:facet>#{listaradmins.personList.rowIndex + 1}
+                                <f:facet name="header">No</f:facet>#{listadmins.personList.rowIndex + 1}
                         </h:column>
     			
     			<h:column>
@@ -57,7 +57,7 @@
     				
     				<f:facet name="header"></f:facet>
     				
-    				<h:commandLink value="Editar" action="#{listaradmins.editAction(l)}" rendered="#{not l.editable}" />
+    				<h:commandLink value="Editar" action="#{listadmins.editAction(l)}" rendered="#{not l.editable}" />
     				
     			</h:column>
                     
@@ -65,13 +65,13 @@
     				
                                 <f:facet name="header"></f:facet>
     				
-                                <h:commandLink value="Borrar" action="#{listaradmins.deleteAction(l)}" />
+                                <h:commandLink value="Borrar" action="#{listadmins.deleteAction(l)}" />
     				
                         </h:column>
 
     		</h:dataTable>
     		
-    		<h:commandButton value="Guardar cambios" action="#{listaradmins.saveAction}" />
+    		<h:commandButton value="Guardar cambios" action="#{listadmins.saveAction}" />
     		
     	</h:form>
     </h:body>
