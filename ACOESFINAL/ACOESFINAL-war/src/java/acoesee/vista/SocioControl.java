@@ -6,17 +6,20 @@
  */
 package acoesee.vista;
 
+import acoesee.entidades.Mensaje;
+import acoesee.entidades.Rol;
 import acoesee.entidades.Usuario;
 import acoesee.negocio.Negocio;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 import acoesee.negocio.*;
+import java.util.List;
 /**
  *
  * @author dosgr
  */
-@Named(value = "listaradmins")
+@Named
 @RequestScoped
 public class SocioControl {
     @Inject
@@ -28,15 +31,41 @@ public class SocioControl {
 
 
     public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+        usuario = new Usuario();
     }
 
     public Usuario getUsuario() {
-        return usuario;
+        return this.usuario;
     }
 
     public String modificarSocio() throws ACOESException{
-        negocio.modificarSocio(usuario) ;
+        negocio.modificar(usuario) ;
         return "socio.xhtml" ;
     }
+
+
+    public String modificar(Usuario c) {
+        usuario = c;
+        return "modificarsocio.xhtml";
+    }
+
+    public List<Usuario> getSocios() {
+        try{
+            List<Usuario> socios=negocio.getUsuarios2("Socio");
+            return socios;
+        }catch(ACOESException e){
+            return null;
+        }
+    }
+
+    public void modificarUsuario(Usuario u){
+
+    }
+
+    public void eliminarUsuario (Usuario u){
+
+    }
+
+
+
 }

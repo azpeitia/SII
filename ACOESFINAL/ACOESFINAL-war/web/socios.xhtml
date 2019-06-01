@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Socios</title>
+    </h:head>
+    <h:body>
+        
+             
+                <h:form>
+                    <h:dataTable value="#{socioControl.socios}" var="c">
+                        <h:column>
+                            <f:facet name="header">DNI</f:facet>
+                            <h:outputText value="#{c.dni}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Nombre</f:facet>
+                            <h:outputText value="#{c.nombre}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Apellidos</f:facet>
+                            <h:outputText value="#{c.apellido1} #{c.apellido2}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Email</f:facet>
+                            <h:outputText value="#{c.email}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">TLF</f:facet>
+                            <h:outputText value="#{c.telefono}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Fecha de Nacimiento</f:facet>
+                            <h:outputText value="#{c.fecha_nacimiento}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Fecha de Alta</f:facet>
+                            <h:outputText value="#{c.fecha_alta}"/>
+                        </h:column>
+                        
+                        <h:column>
+                            <f:facet name="header">Nick</f:facet>
+                            <h:outputText value="#{c.nick}"/>
+                        </h:column>
+                        
+                        <h:commandButton value="Modificar" action="#{socioControl}"/>
+                        
+                        
+                        <h:commandButton value="Eliminar" action="#{socioControl}"/>
+                        
+                    </h:dataTable>
+                       
+                </h:form>
+            
+
+    </h:body>
+</html>
+

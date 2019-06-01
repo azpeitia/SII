@@ -21,11 +21,10 @@ public interface Negocio {
      public void modificar(Usuario user) throws ACOESException;
      public void modificar(Apadrinamientos ap) throws ACOESException;
      public void compruebaLogin(Usuario u) throws ACOESException;
-     public void modificarSocio(Usuario user) throws ACOESException;
      public Usuario refrescarUsuario(Usuario u) throws ACOESException;
      public void insertarSolicitud (Usuario u) throws ACOESException;
      public List<Mensaje> getMensajes() throws ACOESException;
-
+     public List<Usuario> getUsuarios2 (String s)throws ACOESException;          
      public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException;
      public List<Apadrinamientos> getapadrinamientos() throws ACOESException;
 

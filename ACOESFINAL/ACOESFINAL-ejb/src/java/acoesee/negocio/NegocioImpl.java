@@ -68,8 +68,10 @@ public class NegocioImpl implements Negocio {
         
     }
     
-    
-
+    public List<Usuario> getUsuarios2 (String s)throws ACOESException{
+        Query q = em.createQuery("Select u from Usuario u where u.rol.nombre='"+s+"'");
+        return q.getResultList();
+    }
     
     @Override
     public void eliminarAp(Apadrinamientos ap) {
@@ -101,10 +103,6 @@ public class NegocioImpl implements Negocio {
         em.merge(ap);
     }
 
-    @Override
-    public void modificarSocio(Usuario user) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public void compruebaLogin(Usuario u) throws ACOESException {
