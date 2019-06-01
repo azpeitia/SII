@@ -28,17 +28,22 @@ import javax.inject.Inject;
 @RequestScoped
 public class ListarAps {
     
-    private static final long serialVersionUID = 1L;
-    
     private static final ArrayList<Apadrinamientos> personList = new ArrayList<>();
 	
-    private Apadrinamientos apa;
+   
     
     @Inject
     private Negocio negocio;
     
     @Inject
     private InfoSesion sesion;
+    
+    private Apadrinamientos apadrinamiento;
+     
+    
+    public ListarAps(){
+        apadrinamiento=new Apadrinamientos();
+    }
     
     public ArrayList<Apadrinamientos> getPersonList() {
  
@@ -60,11 +65,11 @@ public class ListarAps {
 	}
         
         public void setApadrinamiento(Apadrinamientos ap) {
-            this.apa = ap;
+            this.apadrinamiento = ap;
         }
 
         public Apadrinamientos getApadrinamiento() {
-            return apa;
+            return apadrinamiento;
         }
     
         
@@ -77,7 +82,7 @@ public class ListarAps {
 	
 	public String editAction(Apadrinamientos ap) {
 	    
-		apa=ap;
+		apadrinamiento=ap;
                 return "modificarapa.xhtml";
 	}
         
