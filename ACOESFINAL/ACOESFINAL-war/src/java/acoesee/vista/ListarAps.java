@@ -41,6 +41,8 @@ public class ListarAps {
 
     @Inject
     private InfoSesion sesion;
+    
+    private Apadrinamientos apadrinamiento;
 public List<Apadrinamientos> getPersonList() throws ACOESException {
         Rol r = new Rol("ADMIN");
         personList = negocio.getapadrinamientos();
