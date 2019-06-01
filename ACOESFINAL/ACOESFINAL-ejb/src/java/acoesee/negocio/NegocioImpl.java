@@ -55,7 +55,7 @@ public class NegocioImpl implements Negocio {
     }
 
 
-    
+
 
     @Override
     public List<Usuario> getUsuarios(Rol r)throws ACOESException{
@@ -65,36 +65,36 @@ public class NegocioImpl implements Negocio {
         empleados=q.getResultList();
 
         return empleados;
-        
+
     }
-    
+
     public List<Usuario> getUsuarios2 (String s)throws ACOESException{
         Query q = em.createQuery("Select u from Usuario u where u.rol.nombre='"+s+"'");
         return q.getResultList();
     }
-    
+
     @Override
     public void eliminarAp(Apadrinamientos ap) {
         em.remove(em.merge(ap));
         em.flush();
     }
-    
+
 
     @Override
     public void modificar(Usuario u) throws ACOESException {
        Usuario user=em.find(Usuario.class, u.getNick());
        em.merge(user);
-       
+
     }
     
    
 
     @Override
     public void eliminarUsuario(Usuario user) throws ACOESException {
-        compruebaLogin(user);
+        //compruebaLogin(user);
+        Usuario u=em.find(Usuario.class, user.getNick());
         em.remove(em.merge(user));
-        em.flush();    
-    
+        em.flush();
     }
 
     @Override
@@ -108,13 +108,13 @@ public class NegocioImpl implements Negocio {
     public void compruebaLogin(Usuario u) throws ACOESException {
          //To change body of generated methods, choose Tools | Templates.
          Usuario user = em.find(Usuario.class, u.getNick());
-        if (user == null) 
+        if (user == null)
             throw new CuentaInexistenteException();
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
-        
+
 
     }
-    
+
     @Override
     public Usuario refrescarUsuario(Usuario u) throws ACOESException{
         Usuario user = em.find(Usuario.class, u.getNick());
@@ -122,7 +122,7 @@ public class NegocioImpl implements Negocio {
         if(!user.getPassword().equals(u.getPassword())) throw new ContraseniaInvalidaException();
         return user;
     }
-    
+
     @Override
 
     public List<Mensaje> getMensajes() throws ACOESException{
@@ -137,7 +137,7 @@ public class NegocioImpl implements Negocio {
     public void insertarNj(Jovenes nj){
         em.persist(nj);
     }
-    
+
      @Override
     public void insertMensaje(Apadrinamientos ap) throws ACOESException{
         Mensaje M = new Mensaje() ;
@@ -147,7 +147,7 @@ public class NegocioImpl implements Negocio {
         em.persist(M) ;
         Ent.commit();
     }
-    
+
     @Override
     public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException{
          Apadrinamientos ap ;
@@ -157,8 +157,8 @@ public class NegocioImpl implements Negocio {
          ap = (Apadrinamientos) q.getResultList().get(0) ;
         return ap;
     }
-    
-    
+
+
     @Override
     public void insertarSolicitud (Usuario u) throws ACOESException{
         Usuario user = em.find(Usuario.class, u.getNick());
@@ -170,9 +170,9 @@ public class NegocioImpl implements Negocio {
             sol.setUsuario(user);
             em.persist(sol);
         }else{
-            
+
         }
-        
+
     }
 
     @Override
@@ -182,5 +182,5 @@ public class NegocioImpl implements Negocio {
         l = q.getResultList();
         return l;
     }
-    
+
 }

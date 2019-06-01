@@ -29,8 +29,8 @@ public class SocioControl {
 
     private Usuario usuario;
 
-    public SocioControl(){
-        usuario=new Usuario();
+    public  SocioControl(){
+        usuario = new Usuario();
     }
 
     public void setUsuario(Usuario usuario) {
@@ -44,14 +44,14 @@ public class SocioControl {
     public String modificarSocio() throws ACOESException{
         negocio.modificar(usuario) ;
         Usuario user=infoSesion.getUsuario();
-        
+
         switch (user.getRol().getNombre()) {
             case "Administrador":
                 return "admin.xhtml";
-                
+
             case "Empleado":
                 return "empleado.xhtml";
-                
+
             case "Socio":
                 return "socio.xhtml";
         }
@@ -73,11 +73,27 @@ public class SocioControl {
         }
     }
 
-    public void modificarUsuario(Usuario u){
+    
 
-    }
-
-    public void eliminarUsuario (Usuario u){
+    public String eliminarUsuario (Usuario u){
+        
+        try{
+            negocio.eliminarUsuario(u) ;
+        }catch(ACOESException e){
+        }
+        Usuario user=infoSesion.getUsuario();
+        
+        switch (user.getRol().getNombre()) {
+            case "Administrador":
+                return "admin.xhtml";
+                
+            case "Empleado":
+                return "empleado.xhtml";
+                
+            case "Socio":
+                return "socio.xhtml";
+        }
+        return null;
 
     }
 
