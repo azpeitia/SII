@@ -13,6 +13,12 @@ import acoesee.entidades.Mensaje;
 import acoesee.entidades.Usuario;
 import acoesee.entidades.Mensaje;
 import acoesee.entidades.Jovenes;
+import acoesee.entidades.Solicitud;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import javax.ejb.Stateless;
@@ -150,6 +156,22 @@ public class NegocioImpl implements Negocio {
                  + "e.usuario = (Select e form Usuario e where e.dni="+dni+") ");
          ap = (Apadrinamientos) q.getResultList().get(0) ;
         return ap;
+    }
+    @Override
+    public void insertarSolicitud (Usuario u) throws ACOESException{
+        Usuario user = em.find(Usuario.class, u.getNick());
+        if (user!=null){
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            Date date = new Date();
+            Solicitud sol= new Solicitud();
+            sol.setFecha(date);
+            sol.setUsuario(user);
+            em.persist(sol);
+        }else{
+            
+        }
+        
+        
     }
     
 }
