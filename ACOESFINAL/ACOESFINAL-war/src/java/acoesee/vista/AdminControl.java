@@ -31,7 +31,7 @@ import javax.inject.Named;
 
 
 
-@Named(value = "AdminControl")
+@Named
 @RequestScoped
 public class AdminControl {
     
@@ -42,6 +42,10 @@ public class AdminControl {
     private InfoSesion sesion;
     
     private Usuario usuario;
+    
+    public AdminControl(){
+        usuario=new Usuario();
+    }
     
     
     public List<Mensaje> getMensajes() {
