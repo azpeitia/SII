@@ -36,8 +36,8 @@ public class EmpleadoControl {
    
     
     public List<Usuario> getEmpleados() throws ACOESException{
-        Rol r = new Rol("Empleado");
-        return negocio.getUsuarios(r);
+       
+        return negocio.getUsuarios2("Empleado") ;
     }
     
     public void setUsuario(Usuario user) {
