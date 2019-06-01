@@ -7,7 +7,6 @@ package acoesee.entidades;
  */
 
 
-import acoesee.negocio.ACOESException;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Column;
@@ -27,7 +26,7 @@ public class Rol implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id_rol;
+    private Long id_rol;
     @Column(nullable=false)
     private String nombre;
     private String descripcion;
@@ -36,20 +35,10 @@ public class Rol implements Serializable {
     @OneToMany (mappedBy="rol")
     private List<Usuario> usuarios;
     
-    public Rol(String usuario) throws ACOESException {
-        if(usuario.equalsIgnoreCase("admin") || usuario.equalsIgnoreCase("administrador")) {
-            id_rol = 0;
-            descripcion = "Rol de administrador";
-        } else if(usuario.equalsIgnoreCase("empleado") || usuario.equalsIgnoreCase("emp")) {
-            id_rol = 1;
-            descripcion = "Rol de empleado";
-        }else if(usuario.equalsIgnoreCase("socio")) {
-            id_rol = 2;
-            descripcion = "Rol de socio";
-        } else {
-            throw new ACOESException("Rol no válido");
-        }
-        setNombre(usuario);
+    public Rol(){}
+    
+    public Rol(String empleado) {
+        setNombre(empleado);
     }
     
     
@@ -78,11 +67,11 @@ public class Rol implements Serializable {
         this.descripcion = descripcion;
     }
     
-    public int getId_rol() {
+    public Long getId_rol() {
         return id_rol;
     }
 
-    public void setId_rol(int id_rol) {
+    public void setId_rol(Long id_rol) {
         this.id_rol = id_rol;
     }
 

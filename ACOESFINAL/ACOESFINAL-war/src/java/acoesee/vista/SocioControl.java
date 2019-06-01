@@ -16,7 +16,7 @@ import acoesee.negocio.*;
  *
  * @author dosgr
  */
-@Named(value = "sociocontrol")
+@Named(value = "listaradmins")
 @RequestScoped
 public class SocioControl {
     @Inject
