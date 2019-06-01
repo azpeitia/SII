@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,6 +21,7 @@ import acoesee.negocio.*;
 public class SocioControl {
     @Inject
     private Negocio negocio;
+    @Inject
     private Usuario usuario;
 
     public void setUsuario(Usuario usuario) {

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Alta Mensaje</title>
+    </h:head>
+            
+    <h:body>
+        <h1>Alta Mensaje</h1>
+         <h:form id="Datos socio">
+                    
+            
+                        <h:outputText value="DNI Socio"/>
+                        <h:inputText id="nombre" value="#{MensajeControl.dni}"/>
+                        <h:message for="dni"/>
+                        
+                        <br></br>
+                        
+                        <h:outputText value="Id del joven"/>
+                        <h:inputText id="apellido1" value="#{MensajeControl.idnj}"/>
+                        <h:message for="idnj"/>
+
+                        <h:commandButton value="Dar de alta el mensaje" action="#{MensajeControl.altaMensaje()}"/>
+                        <b></b>
+                       
+                        <c:when test="#{infoSesion.admin}">
+                                <h:button outcome ="admin.xhtml" value="Cancelar" />
+                        </c:when>>
+                        <c:otherwise>
+                                <h:button outcome ="empleado.xhtml" value="Cancelar" />
+                        </c:otherwise>
+            
+        </h:form>
+        
+    </h:body>
+
+</html>

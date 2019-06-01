@@ -10,6 +10,7 @@ package acoesee.negocio;
 import acoesee.entidades.Rol;
 import acoesee.entidades.Apadrinamientos;
 import acoesee.entidades.Usuario;
+import acoesee.entidades.Mensaje;
 import acoesee.entidades.Jovenes;
 import java.util.List;
 import java.util.Random;
@@ -84,7 +85,7 @@ public class NegocioImpl implements Negocio {
         EntityTransaction Ent = em.getTransaction() ;
         Ent.begin();
         em.merge(u);
-        Ent.begin();
+        Ent.commit();
     }
 
     @Override
@@ -129,6 +130,26 @@ public class NegocioImpl implements Negocio {
     public void insertarNj(Jovenes nj){
         
         em.persist(nj);
+    }
+    
+     @Override
+    public void insertMensaje(Apadrinamientos ap) throws ACOESException{
+        Mensaje M = new Mensaje() ;
+        M.setAp(ap);
+        EntityTransaction Ent = em.getTransaction() ;
+        Ent.begin();
+        em.persist(M) ;
+        Ent.commit();
+    }
+    
+    @Override
+    public Apadrinamientos getapadrinamiento(Long dni, Long idnj) throws ACOESException{
+         Apadrinamientos ap ;
+         Query q = em.createQuery("Select e from apadrinamiento e where e.joven = "
+                 + "(Select e from jovenes e where e.id = "+idnj+") and "
+                 + "e.usuario = (Select e form Usuario e where e.dni="+dni+") ");
+         ap = (Apadrinamientos) q.getResultList().get(0) ;
+        return ap;
     }
     
 }
