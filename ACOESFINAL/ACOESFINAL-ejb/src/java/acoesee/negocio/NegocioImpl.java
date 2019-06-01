@@ -191,7 +191,7 @@ public class NegocioImpl implements Negocio {
     @Override
     public List<Apadrinamientos> getapadrinamientos() throws ACOESException {
         List<Apadrinamientos> l = new ArrayList<>();
-        Query q = em.createQuery("Select e from apadrinamientos e");
+        Query q = em.createQuery("SELECT e FROM Apadrinamientos e");
         l = q.getResultList();
         return l;
     }
