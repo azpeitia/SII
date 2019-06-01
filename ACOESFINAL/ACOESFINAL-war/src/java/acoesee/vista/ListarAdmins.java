@@ -42,8 +42,7 @@ public class ListarAdmins {
 
                
     public List<Usuario> getPersonList() throws ACOESException {
-        Rol r = new Rol("Administrador");
-        personList = negocio.getUsuarios2(r);
+        personList = negocio.getUsuarios2("Administrador");
         return personList;
 	}
 	

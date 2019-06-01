@@ -39,14 +39,14 @@ public class ListarAps {
 
     @Inject
     private InfoSesion sesion;
-    
     private Apadrinamientos apadrinamiento;
-    
+
 public List<Apadrinamientos> getPersonList() throws ACOESException {
         Rol r = new Rol("ADMIN");
         personList = negocio.getapadrinamientos();
         return personList;
 	}
+
 
 	public String saveAction() throws ACOESException {
 
@@ -82,9 +82,9 @@ public List<Apadrinamientos> getPersonList() throws ACOESException {
 		apadrinamiento=ap;
                 return "modificarapa.xhtml";
 	}
-        
+
         public String edit(){
-            
+
             //apadrinamiento.
             return null;
         }

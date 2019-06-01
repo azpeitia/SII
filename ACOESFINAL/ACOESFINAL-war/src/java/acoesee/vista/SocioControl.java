@@ -19,7 +19,7 @@ import java.util.List;
  *
  * @author dosgr
  */
-@Named(value = "socioControl")
+@Named
 @RequestScoped
 public class SocioControl {
     @Inject
@@ -39,10 +39,16 @@ public class SocioControl {
     }
 
     public String modificarSocio() throws ACOESException{
-        negocio.modificarSocio(usuario) ;
+        negocio.modificar(usuario) ;
         return "socio.xhtml" ;
     }
-    
+
+
+    public String modificar(Usuario c) {
+        usuario = c;
+        return "modificarsocio.xhtml";
+    }
+
     public List<Usuario> getSocios() {
         try{
             List<Usuario> socios=negocio.getUsuarios2("Socio");
@@ -51,14 +57,15 @@ public class SocioControl {
             return null;
         }
     }
-    
+
     public void modificarUsuario(Usuario u){
-        
+
     }
-    
+
     public void eliminarUsuario (Usuario u){
-        
+
     }
-    
-    
+
+
+
 }

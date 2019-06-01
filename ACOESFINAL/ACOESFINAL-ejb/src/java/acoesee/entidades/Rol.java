@@ -35,6 +35,8 @@ public class Rol implements Serializable {
     @OneToMany (mappedBy="rol")
     private List<Usuario> usuarios;
     
+    public Rol(){}
+    
     public Rol(String empleado) {
         setNombre(empleado);
     }
